@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>さいたま市立与野東中学校 創立80周年記念文化祭 | 公式特設サイト</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter (英数) + M PLUS Rounded 1c & Noto Sans JP (日本語) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
+            display: ['Inter', '"M PLUS Rounded 1c"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      /* より明るく澄み渡る東風のスカイブルー〜サンセット〜夜空花火グラデーション */
+      background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 14%, #f8fafc 28%, #fffbeb 46%, #ffedd5 68%, #1e1b4b 86%, #0f172a 100%);
+      min-height: 100vh;
+      color: #0f172a;
+    }
+    
+    /* B案の明るくクリーンで洗練されたカード要素を取り入れたハイブリッドカード */
+    .card-clean-white {
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px -2px rgba(14, 165, 233, 0.08);
+      transition: all 0.2s ease;
+    }
+    
+    .card-sunset-clean {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, #fff7ed 100%);
+      border: 1px solid #fed7aa;
+      box-shadow: 0 4px 20px -2px rgba(249, 115, 22, 0.1);
+    }
+    
+    .card-night-clean {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border: 1px solid #4338ca;
+      box-shadow: 0 8px 28px -4px rgba(15, 23, 42, 0.4);
+      color: #f8fafc;
+    }
+
+    .badge-pill {
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .wave-badge { animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .text-shadow-firework {
+      text-shadow: 0 0 12px rgba(244, 114, 182, 0.6), 0 0 24px rgba(192, 132, 252, 0.4);
+    }
+  
+        
+        /* 🎆 最後の夜空・フィナーレゾーン：キラキラと煌めく大輪花火アニメーション */
+    .bloom-firework {
+      position: absolute;
+      transform-origin: center center;
+      animation: firework-bloom-glitter ease-out infinite;
+    }
+
+    .bloom-firework-ring {
+      position: absolute;
+      transform-origin: center center;
+      animation: firework-ring-pulse ease-out infinite;
+    }
+
+    @keyframes firework-bloom-glitter {
+      0% {
+        transform: scale(0.1) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 24px currentColor);
+      }
+      45% {
+        transform: scale(1.3) rotate(25deg);
+        opacity: 0.95;
+        filter: drop-shadow(0 0 16px rgba(253, 224, 71, 0.8)) drop-shadow(0 0 28px currentColor);
+      }
+      75% {
+        transform: scale(1.6) rotate(45deg);
+        opacity: 0.5;
+        filter: drop-shadow(0 0 8px currentColor);
+      }
+      100% {
+        transform: scale(1.9) rotate(60deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes firework-ring-pulse {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.9;
+      }
+      65% {
+        transform: scale(1.5);
+        opacity: 0.4;
+      }
+      100% {
+        transform: scale(1.9);
+        opacity: 0;
+      }
+    }
+
+    .sparkle-burst {
+      position: absolute;
+      animation: sparkle-twinkle ease-in-out infinite alternate;
+    }
+    @keyframes sparkle-twinkle {
+      0% { transform: scale(0.3) rotate(0deg); opacity: 0.1; }
+      50% { transform: scale(1.4) rotate(90deg); opacity: 1; filter: drop-shadow(0 0 6px #fde047); }
+      100% { transform: scale(0.8) rotate(180deg); opacity: 0.4; }
+    }
+
+    /* マスコットのホバー＆浮遊演出 */
+    .mascot-bounce {
+      animation: mascot-float 3.5s ease-in-out infinite;
+    }
+    @keyframes mascot-float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+
+    /* 🌸 「私の好きを咲かせる」次々とふわっと開花するハッピーなフラワーアニメーション */
+    .bg-flowers-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bloom-flower {
+      position: absolute;
+      transform-origin: center center;
+      animation: bloom-cycle ease-in-out infinite;
+    }
+
+    .bloom-flower-spin {
+      position: absolute;
+      transform-origin: center center;
+      animation: bloom-spin-cycle ease-in-out infinite;
+    }
+
+    /* ふわっと蕾から開花して、優しく息づくアニメーション */
+    @keyframes bloom-cycle {
+      0% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+      }
+      15% {
+        transform: scale(1.2) rotate(15deg);
+        opacity: 0.85;
+      }
+      25% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.75;
+      }
+      75% {
+        transform: scale(1.08) rotate(10deg);
+        opacity: 0.75;
+      }
+      90% {
+        transform: scale(0.8) rotate(-15deg);
+        opacity: 0.3;
+      }
+      100% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes bloom-spin-cycle {
+      0% {
+        transform: scale(0) rotate(60deg);
+        opacity: 0;
+      }
+      20% {
+        transform: scale(1.15) rotate(-10deg);
+        opacity: 0.8;
+      }
+      35% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.7;
+      }
+      70% {
+        transform: scale(1.05) rotate(15deg);
+        opacity: 0.7;
+      }
+      90% {
+        transform: scale(0.6) rotate(30deg);
+        opacity: 0.2;
+      }
+      100% {
+        transform: scale(0) rotate(60deg);
+        opacity: 0;
+      }
+    }
+
+    .sparkle-pop {
+      position: absolute;
+      color: #f59e0b;
+      animation: pop-sparkle ease-in-out infinite alternate;
+    }
+
+    @keyframes pop-sparkle {
+      0% { transform: scale(0.4) rotate(0deg); opacity: 0.1; }
+      100% { transform: scale(1.2) rotate(90deg); opacity: 0.75; }
+    }
+
+    /* ✨ キラッと光るNewsバッジ＆シマー演出 */
+    .badge-shimmer {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fef3c7 100%);
+      border: 1px solid #f59e0b;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+    }
+    .badge-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(25deg);
+      animation: badge-shine 2.5s infinite ease-in-out;
+    }
+    @keyframes badge-shine {
+      0%, 20% { left: -60%; }
+      55%, 100% { left: 140%; }
+    }
+
+    .sparkle-icon {
+      display: inline-block;
+      animation: sparkle-spin 2.5s ease-in-out infinite;
+    }
+    @keyframes sparkle-spin {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+      50% { transform: scale(1.25) rotate(15deg); opacity: 1; filter: drop-shadow(0 0 4px #f59e0b); }
+    }
+
+  </style>
+</head>
+<body class="antialiased selection:bg-sky-500 selection:text-white pb-16 relative overflow-x-hidden min-h-screen">
+
+        <!-- 🌸 背景：「好きを咲かせる」開花（日中） ➔ 「夕暮れの重なり」 ➔ 「夜空の大輪花火」（スクロール連動） -->
+  <div class="bg-flowers-container">
+    
+    <!-- ═══ 1. 【青空・日中ゾーン（ページ上部〜中部）：お花のみ】 ═══ -->
+    
+    <!-- 花1: ピンク（ヘッダー付近） -->
+    <svg class="bloom-flower" style="top: 3%; left: 4%; width: 42px; height: 42px; animation-duration: 9s; animation-delay: 0s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fda4af" opacity="0.85"/>
+      <circle cx="78" cy="42" r="18" fill="#fda4af" opacity="0.85"/>
+      <circle cx="68" cy="76" r="18" fill="#fda4af" opacity="0.85"/>
+      <circle cx="32" cy="76" r="18" fill="#fda4af" opacity="0.85"/>
+      <circle cx="22" cy="42" r="18" fill="#fda4af" opacity="0.85"/>
+      <circle cx="50" cy="50" r="14" fill="#fef08a"/>
+    </svg>
+
+    <!-- 花2: スカイブルー（タイマー付近） -->
+    <svg class="bloom-flower-spin" style="top: 10%; right: 5%; width: 38px; height: 38px; animation-duration: 11s; animation-delay: 2.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#7dd3fc" opacity="0.85"/>
+      <circle cx="78" cy="42" r="18" fill="#7dd3fc" opacity="0.85"/>
+      <circle cx="68" cy="76" r="18" fill="#7dd3fc" opacity="0.85"/>
+      <circle cx="32" cy="76" r="18" fill="#7dd3fc" opacity="0.85"/>
+      <circle cx="22" cy="42" r="18" fill="#7dd3fc" opacity="0.85"/>
+      <circle cx="50" cy="50" r="14" fill="#ffffff"/>
+    </svg>
+
+    <!-- 花3: サンシャインイエロー（開催概要付近） -->
+    <svg class="bloom-flower" style="top: 22%; left: 5%; width: 46px; height: 46px; animation-duration: 10s; animation-delay: 4.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fde047" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#fde047" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#fde047" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#fde047" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#fde047" opacity="0.9"/>
+      <circle cx="50" cy="50" r="14" fill="#fb923c"/>
+    </svg>
+
+    <!-- 花4: コーラルローズ（宮崎選手ゲスト付近） -->
+    <svg class="bloom-flower-spin" style="top: 36%; right: 4%; width: 44px; height: 44px; animation-duration: 12s; animation-delay: 1.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fb7185" opacity="0.85"/>
+      <circle cx="78" cy="42" r="18" fill="#fb7185" opacity="0.85"/>
+      <circle cx="68" cy="76" r="18" fill="#fb7185" opacity="0.85"/>
+      <circle cx="32" cy="76" r="18" fill="#fb7185" opacity="0.85"/>
+      <circle cx="22" cy="42" r="18" fill="#fb7185" opacity="0.85"/>
+      <circle cx="50" cy="50" r="14" fill="#fef08a"/>
+    </svg>
+
+    <!-- 花5: ミントグリーン（第1部コンテンツ上部） -->
+    <svg class="bloom-flower" style="top: 48%; left: 4%; width: 40px; height: 40px; animation-duration: 11.5s; animation-delay: 5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#6ee7b7" opacity="0.85"/>
+      <circle cx="78" cy="42" r="18" fill="#6ee7b7" opacity="0.85"/>
+      <circle cx="68" cy="76" r="18" fill="#6ee7b7" opacity="0.85"/>
+      <circle cx="32" cy="76" r="18" fill="#6ee7b7" opacity="0.85"/>
+      <circle cx="22" cy="42" r="18" fill="#6ee7b7" opacity="0.85"/>
+      <circle cx="50" cy="50" r="14" fill="#ffffff"/>
+    </svg>
+
+    <!-- 花6: オレンジブロッサム（第1部ブース下部） -->
+    <svg class="bloom-flower-spin" style="top: 59%; right: 5%; width: 42px; height: 42px; animation-duration: 10s; animation-delay: 2s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fed7aa" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#fed7aa" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#fed7aa" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#fed7aa" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#fed7aa" opacity="0.9"/>
+      <circle cx="50" cy="50" r="14" fill="#f97316"/>
+    </svg>
+
+
+    <!-- ═══ 2. 【夕暮れグラデーション移行部：お花と花火のやさしい重なり】 ═══ -->
+    
+    <!-- 夕暮れ花: トワイライトパープル（第2部記念イベントゾーン） -->
+    <svg class="bloom-flower-spin" style="top: 69%; left: 4%; width: 44px; height: 44px; animation-duration: 9.5s; animation-delay: 3s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#c084fc" opacity="0.8"/>
+      <circle cx="78" cy="42" r="18" fill="#c084fc" opacity="0.8"/>
+      <circle cx="68" cy="76" r="18" fill="#c084fc" opacity="0.8"/>
+      <circle cx="32" cy="76" r="18" fill="#c084fc" opacity="0.8"/>
+      <circle cx="22" cy="42" r="18" fill="#c084fc" opacity="0.8"/>
+      <circle cx="50" cy="50" r="14" fill="#fef08a"/>
+    </svg>
+
+    <!-- 重なり花火1: ローズピンク＆ゴールドの序曲花火（夕暮れから夜空への境界・右側） -->
+    <svg class="bloom-firework" style="top: 73%; right: 4%; width: 80px; height: 80px; color: #f43f5e; animation-duration: 6.5s; animation-delay: 0.5s;" viewBox="0 0 120 120" fill="none">
+      <g stroke="url(#fw-grad1)" stroke-width="3" stroke-linecap="round">
+        <line x1="60" y1="10" x2="60" y2="35"/>
+        <line x1="60" y1="110" x2="60" y2="85"/>
+        <line x1="10" y1="60" x2="35" y2="60"/>
+        <line x1="110" y1="60" x2="85" y2="60"/>
+        <line x1="25" y1="25" x2="42" y2="42"/>
+        <line x1="95" y1="95" x2="78" y2="78"/>
+        <line x1="25" y1="95" x2="42" y2="78"/>
+        <line x1="95" y1="25" x2="78" y2="42"/>
+      </g>
+      <circle cx="60" cy="6" r="4.5" fill="#fde047"/>
+      <circle cx="60" cy="114" r="4.5" fill="#fde047"/>
+      <circle cx="6" cy="60" r="4.5" fill="#fde047"/>
+      <circle cx="114" cy="60" r="4.5" fill="#fde047"/>
+      <circle cx="20" cy="20" r="4" fill="#fb7185"/>
+      <circle cx="100" cy="100" r="4" fill="#fb7185"/>
+      <circle cx="20" cy="100" r="4" fill="#fb7185"/>
+      <circle cx="100" cy="20" r="4" fill="#fb7185"/>
+      <circle cx="60" cy="60" r="10" fill="#ffffff" filter="drop-shadow(0 0 8px #fde047)"/>
+      <defs>
+        <linearGradient id="fw-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fde047"/>
+          <stop offset="100%" stop-color="#f43f5e"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+
+    <!-- ═══ 3. 【完全な夜空・フィナーレゾーン（ページ最下部）：花火のみ！】 ═══ -->
+    
+    <!-- 花火2: スカイブルー＆エメラルドの星花火（花火カード左上） -->
+    <svg class="bloom-firework" style="top: 79%; left: 3%; width: 85px; height: 85px; color: #0ea5e9; animation-duration: 7.2s; animation-delay: 2.2s;" viewBox="0 0 120 120" fill="none">
+      <g stroke="url(#fw-grad2)" stroke-width="3" stroke-linecap="round">
+        <line x1="60" y1="12" x2="60" y2="36"/>
+        <line x1="60" y1="108" x2="60" y2="84"/>
+        <line x1="12" y1="60" x2="36" y2="60"/>
+        <line x1="108" y1="60" x2="84" y2="60"/>
+        <line x1="26" y1="26" x2="43" y2="43"/>
+        <line x1="94" y1="94" x2="77" y2="77"/>
+        <line x1="26" y1="94" x2="43" y2="77"/>
+        <line x1="94" y1="26" x2="77" y2="43"/>
+      </g>
+      <circle cx="60" cy="8" r="4" fill="#67e8f9"/>
+      <circle cx="60" cy="112" r="4" fill="#67e8f9"/>
+      <circle cx="8" cy="60" r="4" fill="#67e8f9"/>
+      <circle cx="112" cy="60" r="4" fill="#67e8f9"/>
+      <circle cx="22" cy="22" r="3.5" fill="#a7f3d0"/>
+      <circle cx="98" cy="98" r="3.5" fill="#a7f3d0"/>
+      <circle cx="22" cy="98" r="3.5" fill="#a7f3d0"/>
+      <circle cx="98" cy="22" r="3.5" fill="#a7f3d0"/>
+      <circle cx="60" cy="60" r="9" fill="#ffffff" filter="drop-shadow(0 0 8px #38bdf8)"/>
+      <defs>
+        <linearGradient id="fw-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="100%" stop-color="#0284c7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- 花火3: オーロラパープル＆マゼンタの大輪花火（花火カード右下） -->
+    <svg class="bloom-firework" style="top: 84%; right: 4%; width: 92px; height: 92px; color: #a855f7; animation-duration: 8s; animation-delay: 3.8s;" viewBox="0 0 120 120" fill="none">
+      <g stroke="url(#fw-grad3)" stroke-width="3" stroke-linecap="round">
+        <line x1="60" y1="8" x2="60" y2="34"/>
+        <line x1="60" y1="112" x2="60" y2="86"/>
+        <line x1="8" y1="60" x2="34" y2="60"/>
+        <line x1="112" y1="60" x2="86" y2="60"/>
+        <line x1="23" y1="23" x2="41" y2="41"/>
+        <line x1="97" y1="97" x2="79" y2="79"/>
+        <line x1="23" y1="97" x2="41" y2="79"/>
+        <line x1="97" y1="23" x2="79" y2="41"/>
+      </g>
+      <circle cx="60" cy="5" r="4.5" fill="#f472b6"/>
+      <circle cx="60" cy="115" r="4.5" fill="#f472b6"/>
+      <circle cx="5" cy="60" r="4.5" fill="#f472b6"/>
+      <circle cx="115" cy="60" r="4.5" fill="#f472b6"/>
+      <circle cx="18" cy="18" r="4" fill="#e879f9"/>
+      <circle cx="102" cy="102" r="4" fill="#e879f9"/>
+      <circle cx="18" cy="102" r="4" fill="#e879f9"/>
+      <circle cx="102" cy="18" r="4" fill="#e879f9"/>
+      <circle cx="60" cy="60" r="10" fill="#ffffff" filter="drop-shadow(0 0 10px #c084fc)"/>
+      <defs>
+        <linearGradient id="fw-grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fdf4ff"/>
+          <stop offset="100%" stop-color="#c084fc"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- 花火4: ゴールド＆アンバーの千輪菊（安全管理ルール付近・左） -->
+    <svg class="bloom-firework" style="top: 89%; left: 4%; width: 88px; height: 88px; color: #eab308; animation-duration: 6.8s; animation-delay: 1.2s;" viewBox="0 0 120 120" fill="none">
+      <g stroke="url(#fw-grad4)" stroke-width="3" stroke-linecap="round">
+        <line x1="60" y1="10" x2="60" y2="35"/>
+        <line x1="60" y1="110" x2="60" y2="85"/>
+        <line x1="10" y1="60" x2="35" y2="60"/>
+        <line x1="110" y1="60" x2="85" y2="60"/>
+        <line x1="25" y1="25" x2="42" y2="42"/>
+        <line x1="95" y1="95" x2="78" y2="78"/>
+        <line x1="25" y1="95" x2="42" y2="78"/>
+        <line x1="95" y1="25" x2="78" y2="42"/>
+      </g>
+      <circle cx="60" cy="6" r="4" fill="#ffffff"/>
+      <circle cx="60" cy="114" r="4" fill="#ffffff"/>
+      <circle cx="6" cy="60" r="4" fill="#ffffff"/>
+      <circle cx="114" cy="60" r="4" fill="#ffffff"/>
+      <circle cx="20" cy="20" r="3.5" fill="#fde047"/>
+      <circle cx="100" cy="100" r="3.5" fill="#fde047"/>
+      <circle cx="20" cy="100" r="3.5" fill="#fde047"/>
+      <circle cx="100" cy="20" r="3.5" fill="#fde047"/>
+      <circle cx="60" cy="60" r="9" fill="#ffffff" filter="drop-shadow(0 0 8px #fbbf24)"/>
+      <defs>
+        <linearGradient id="fw-grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="100%" stop-color="#f59e0b"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- 花火5: ネオンシアン＆ホワイトスター（フッター付近・右） -->
+    <svg class="bloom-firework" style="top: 95%; right: 5%; width: 78px; height: 78px; color: #06b6d4; animation-duration: 7.8s; animation-delay: 5s;" viewBox="0 0 120 120" fill="none">
+      <g stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round">
+        <line x1="60" y1="15" x2="60" y2="38"/>
+        <line x1="60" y1="105" x2="60" y2="82"/>
+        <line x1="15" y1="60" x2="38" y2="60"/>
+        <line x1="105" y1="60" x2="82" y2="60"/>
+        <line x1="28" y1="28" x2="44" y2="44"/>
+        <line x1="92" y1="92" x2="76" y2="76"/>
+        <line x1="28" y1="92" x2="44" y2="76"/>
+        <line x1="92" y1="28" x2="76" y2="44"/>
+      </g>
+      <circle cx="60" cy="10" r="3.5" fill="#ffffff"/>
+      <circle cx="60" cy="110" r="3.5" fill="#ffffff"/>
+      <circle cx="10" cy="60" r="3.5" fill="#ffffff"/>
+      <circle cx="110" cy="60" r="3.5" fill="#ffffff"/>
+      <circle cx="60" cy="60" r="8" fill="#ffffff" filter="drop-shadow(0 0 6px #67e8f9)"/>
+    </svg>
+
+    <!-- ✧ スクロール連動のキラキラ光る星芒 ✧ -->
+    <div class="sparkle-burst text-sm text-amber-300" style="top: 5%; left: 16%; animation-duration: 2.8s;">✦</div>
+    <div class="sparkle-burst text-xs text-sky-300" style="top: 18%; right: 12%; animation-duration: 3.5s; animation-delay: 1s;">✧</div>
+    <div class="sparkle-burst text-base text-yellow-200" style="top: 32%; left: 12%; animation-duration: 3.2s; animation-delay: 1.8s;">✦</div>
+    <div class="sparkle-burst text-xs text-pink-300" style="top: 45%; right: 14%; animation-duration: 4s; animation-delay: 0.5s;">✧</div>
+    <div class="sparkle-burst text-sm text-teal-300" style="top: 58%; left: 14%; animation-duration: 3.6s; animation-delay: 2s;">✦</div>
+    
+    <!-- 夜空の煌めく星芒粒子 -->
+    <div class="sparkle-burst text-lg text-pink-300" style="top: 74%; right: 15%; animation-duration: 2.5s; animation-delay: 0.5s;">✵</div>
+    <div class="sparkle-burst text-base text-cyan-300" style="top: 81%; left: 12%; animation-duration: 3s; animation-delay: 1.5s;">✴</div>
+    <div class="sparkle-burst text-xl text-yellow-300" style="top: 86%; right: 16%; animation-duration: 2.2s; animation-delay: 2.2s;">✦</div>
+    <div class="sparkle-burst text-base text-pink-200" style="top: 92%; left: 14%; animation-duration: 3.4s; animation-delay: 0.8s;">✧</div>
+    <div class="sparkle-burst text-lg text-cyan-200" style="top: 96%; right: 14%; animation-duration: 2.8s; animation-delay: 1.2s;">✵</div>
+  </div>
+
+
+  <!-- 1. 【最上部アナウンスバー】 -->
+  <div class="bg-sky-600 text-white text-xs font-bold py-2 px-4 text-center tracking-wide shadow-sm flex items-center justify-center gap-1.5">
+    <span class="inline-block w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
+    <span>2026年11月7日(土) 開催！創立80周年記念文化祭 特設サイト</span>
+  </div>
+
+  <div class="max-w-xl mx-auto px-4 pt-4 flex flex-col gap-6 relative z-10">
+
+    <!-- 2. 【メインヘッダー：爽やかな東風の青空 ＆ 公式スローガン】 -->
+    <header class="text-center pt-3 pb-1 flex flex-col items-center gap-3">
+      <!-- 80周年記念バッジ -->
+      <div class="inline-flex items-center gap-1.5 bg-white text-sky-800 border border-sky-200 px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase shadow-sm wave-badge">
+        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        さいたま市立与野東中学校 創立80周年
+      </div>
+
+      <!-- メインタイトル -->
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug font-rounded">
+          創立80周年記念文化祭
+        </h1>
+        <p class="text-xs sm:text-sm text-sky-950 font-bold tracking-wide mt-1">
+          〜 未来を迎えに行こう。私の「好き」がひらく一日 〜
+        </p>
+      </div>
+
+      <!-- 在校生投票で決定！80周年公式スローガンフレーム（マスコットがひょっこり！） -->
+      <div class="w-full bg-white rounded-2xl p-4 border border-sky-200 shadow-sm flex flex-col items-center gap-1 relative">
+        
+        <!-- 🍃 ひょっこり東風マスコット（うちわ持ち・大きく存在感アップ！） -->
+        <div class="absolute -top-12 -right-3 sm:-right-4 flex items-end pointer-events-none z-20">
+          <div class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-amber-300 shadow-lg -mr-2 mb-4 z-10 animate-bounce">
+            東風に乗ろう！
+          </div>
+          <img src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce">
+        </div>
+
+        <span class="badge-pill bg-sky-100 text-sky-800 border border-sky-200 uppercase text-[10px]">
+          創立80周年記念 スローガン
+        </span>
+        <div class="mt-1 text-center">
+          <p class="text-sm sm:text-base font-black text-slate-900 leading-snug font-rounded">
+            「<ruby>希望<rt class="text-[10px] text-sky-600 font-bold">ゆめ</rt></ruby>のバトンをつなげ、実現の未来へ！」
+          </p>
+          <p class="text-xs sm:text-sm font-bold text-sky-800 mt-0.5 font-rounded">
+            〜 東風と歩んだ80年 これまでも、これからも 〜
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. 【📢 お知らせ・新着情報（News & Updates）】 -->
+    <section class="card-clean-white rounded-2xl p-4 sm:p-5 shadow-sm border-t-4 border-amber-400">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3">
+        <h2 class="text-sm sm:text-base font-black text-slate-900 flex items-center gap-2 font-rounded">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+          お知らせ・新着情報
+        </h2>
+        <span class="badge-pill badge-shimmer text-amber-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1">
+          <span class="sparkle-icon">✨</span> News <span class="sparkle-icon">✨</span>
+        </span>
+      </div>
+      <div class="space-y-2 text-xs">
+        <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+          <span class="text-slate-500 font-bold shrink-0 text-[11px]">2026.09.24</span>
+          <div class="space-y-0.5">
+            <span class="badge-pill bg-emerald-600 text-white text-[9px] py-0.5 px-1.5 font-bold">公開</span>
+            <p class="text-slate-800 font-medium leading-relaxed">
+              創立80周年記念文化祭 公式特設サイトを公開しました！
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2.5 leading-relaxed bg-amber-50/70 p-2 rounded-lg border border-amber-200/60">
+        ※雨天時の開催判断や追加プログラムなどの直前情報は、本コーナーにて随時お知らせいたします。
+      </p>
+    </section>
+
+    <!-- 4. 【カウントダウンタイマー】（クリーンで明るい4分割デザイン） -->
+    <section class="card-clean-white rounded-2xl p-4 shadow-sm text-center border-t-4 border-sky-500">
+      <div class="text-[11px] font-bold text-slate-600 tracking-wider uppercase mb-2.5 flex items-center justify-center gap-1">
+        <svg class="w-3.5 h-3.5 text-sky-600 animate-spin" style="animation-duration: 8s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        文化祭開催まで あと
+      </div>
+      <div class="grid grid-cols-4 gap-2">
+        <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl text-center">
+          <span id="timer-days" class="text-2xl sm:text-3xl font-black text-slate-900 font-display block">--</span>
+          <span class="text-[10px] block font-bold text-slate-500 uppercase">Days</span>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl text-center">
+          <span id="timer-hours" class="text-2xl sm:text-3xl font-black text-slate-900 font-display block">--</span>
+          <span class="text-[10px] block font-bold text-slate-500 uppercase">Hours</span>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl text-center">
+          <span id="timer-mins" class="text-2xl sm:text-3xl font-black text-slate-900 font-display block">--</span>
+          <span class="text-[10px] block font-bold text-slate-500 uppercase">Mins</span>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl text-center">
+          <span id="timer-secs" class="text-2xl sm:text-3xl font-black text-slate-900 font-display block">--</span>
+          <span class="text-[10px] block font-bold text-slate-500 uppercase">Secs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 【開催概要】（日程・会場・安全管理ルール・お問い合わせ） -->
+    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-4 border-t-4 border-teal-500">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+        <h2 class="text-base font-black text-slate-900 flex items-center gap-2 font-rounded">
+          <span class="w-3 h-3 rounded bg-teal-600"></span>
+          開催概要
+        </h2>
+        <span class="badge-pill bg-teal-100 text-teal-800 font-bold text-[10px]">Overview</span>
+      </div>
+
+      <!-- ① 日程 -->
+      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+        <div class="flex items-center gap-2 mb-1.5">
+          <span class="badge-pill bg-teal-600 text-white text-[10px]">日程</span>
+          <strong class="text-slate-900 text-sm font-bold">2026年11月7日(土) 開催</strong>
+        </div>
+        <p class="text-slate-700 leading-relaxed pl-1">
+          <strong>【第1部】10:00 〜 15:00</strong>（一般公開・どなたでも来場可）<br>
+          <strong>【第2部】15:30 〜 17:15</strong>（全校生徒記念イベント／在校生限定・非公開）<br>
+          <strong>【フィナーレ】17:30頃 〜</strong>（創立80周年記念花火／在校生限定・任意参加）
+        </p>
+      </div>
+
+      <!-- ② 会場・アクセス -->
+      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+        <div class="flex items-center gap-2 mb-1.5">
+          <span class="badge-pill bg-slate-700 text-white text-[10px]">会場</span>
+          <strong class="text-slate-900 text-sm font-bold">さいたま市立与野東中学校</strong>
+        </div>
+        <p class="text-slate-700 leading-relaxed pl-1">
+          校庭・体育館・校舎内・視聴覚室 等<br>
+          <span class="text-amber-900 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200 inline-block mt-1">
+            ⚠️ 敷地内の駐輪スペースは場所が限られておりますので、なるべく徒歩または公共交通機関でお越しください。（※お車・バイクでのご来校は固くお断りいたします）
+          </span>
+        </p>
+      </div>
+
+      <!-- ③ 安全管理ルール（白・ライトカラーベースでシニア層にも読みやすい高視認性配色） -->
+      <div class="bg-white border-2 border-rose-400 rounded-xl p-3.5 sm:p-4 shadow-xs space-y-3">
+        <div class="flex items-center gap-2 border-b border-rose-100 pb-2">
+          <svg class="w-5 h-5 text-rose-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <h3 class="text-sm font-black text-rose-950">
+            安全管理ルール ＆ ご来場の皆様へのお願い
+          </h3>
+        </div>
+
+        <div class="space-y-2 text-xs text-slate-900 leading-relaxed">
+          <!-- 撮影・SNS厳格ルール -->
+          <div class="bg-rose-50/80 p-2.5 rounded-lg border border-rose-200 space-y-1">
+            <p class="font-bold text-rose-950 flex items-center gap-1 text-xs">
+              <span>🚫</span> <strong>写真・動画のSNS・Webへのアップロードは【一切禁止】です</strong>
+            </p>
+            <p class="text-slate-800 text-[11px] leading-relaxed">
+              生徒の肖像権およびプライバシー安全管理のため、個人が特定できるかどうかにかかわらず、SNSや動画サイト、ブログ等への投稿は固くお断りいたします。
+            </p>
+            <p class="text-slate-800 text-[11px] leading-relaxed pt-1 border-t border-rose-200/60">
+              📸 校内での撮影は「保護者・ご家族および関係者」に限定いたします。一般来場者の方による生徒の撮影はご遠慮ください。ご家族による記念撮影はご家庭内でお楽しみください。
+            </p>
+          </div>
+
+          <!-- 飲食ルール -->
+          <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 space-y-1">
+            <p class="font-bold text-slate-900 flex items-center gap-1 text-xs">
+              <span>🍽️</span> <strong>飲食エリアの厳守とゴミの持ち帰り</strong>
+            </p>
+            <p class="text-slate-700 text-[11px] leading-relaxed">
+              衛生管理のため、飲食は校庭近くの「指定飲食スペース」内のみでお願いいたします。ゴミの分別回収・持ち帰りにご協力をお願いいたします。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ④ お問い合わせ（学校問い合わせ不可・実行委員会専用フォーム窓口） -->
+      <div class="bg-sky-50/70 p-3.5 sm:p-4 rounded-xl border border-sky-200 text-xs space-y-2.5">
+        <div class="flex items-center gap-1.5 text-sky-900 font-bold">
+          <svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+          <span class="text-sm font-black">お問い合わせ窓口</span>
+        </div>
+        <p class="text-slate-800 leading-relaxed font-medium">
+          創立80周年記念文化祭に関するお問い合わせは、<strong class="text-rose-700 font-bold underline">学校（教職員）ではお受けできません</strong>。<br>
+          すべて下記<strong>【創立80周年記念事業実行委員会】</strong>専用フォームよりお願いいたします。
+        </p>
+        
+        <!-- お問い合わせフォーム起動ボタン -->
+        <div class="pt-1 flex flex-col sm:flex-row gap-2">
+          <!-- Googleフォームへの直リンクボタン -->
+          <a id="google-form-link" href="https://forms.gle/Eumg4oeZrCHoDowJ8" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-black py-2.5 px-4 rounded-xl text-xs sm:text-sm transition-all shadow-sm active:scale-98">
+            <svg class="w-4 h-4 text-sky-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            💬 お問い合わせ専用フォームを開く
+          </a>
+          <!-- ページ内展開切り替えボタン -->
+          <button id="toggle-form-btn" type="button" class="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold py-2.5 px-3 rounded-xl text-xs transition-colors shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            ページ内で表示
+          </button>
+        </div>
+
+        <!-- ページ内埋め込み枠（普段は非表示・ボタンで開閉） -->
+        <div id="embedded-form-container" class="hidden mt-3 pt-3 border-t border-sky-200/80">
+          <div class="bg-white rounded-xl border border-sky-200 p-2 overflow-hidden">
+            <!-- Googleフォームの埋め込みiframe -->
+            <iframe id="google-form-iframe" src="https://forms.gle/Eumg4oeZrCHoDowJ8" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded-lg">読み込んでいます…</iframe>
+          </div>
+        </div>
+
+        <p class="text-[10px] text-slate-500 leading-relaxed">
+          ※ご送信いただいた内容は実行委員会にて確認のうえ、ご入力いただいたメールアドレス宛に折り返しご返信いたします。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. 【タイムライン ＆ プログラム概要】（スッキリ明るいピルバッジ構成） -->
+    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 border-t-4 border-sky-500">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+        <h2 class="text-base font-black text-slate-900 flex items-center gap-2 font-rounded">
+          <span class="w-3 h-3 rounded bg-sky-600"></span>
+          タイムライン ＆ プログラム概要
+        </h2>
+        <span class="text-xs font-bold text-slate-500">当日の進行予定</span>
+      </div>
+      
+      <div class="space-y-3 text-xs text-slate-700">
+        <div class="grid grid-cols-1 gap-2.5">
+          <!-- 第1部 -->
+          <div class="border-2 border-sky-400/40 bg-sky-50/70 rounded-xl p-3.5 flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill bg-sky-600 text-white">第1部</span>
+              <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] px-2.5 py-0.5">どなたでも来場可（一般公開）</span>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 mt-1">10:00 〜 15:00 一般公開・部活動・有志団体・地域交流</h3>
+            <p class="text-slate-700 leading-relaxed mt-0.5">
+              吹奏楽部生演奏、生徒有志の発表・展示、体験ワークショップ、絶品キッチンカーなど
+            </p>
+            <p class="text-[11px] text-sky-950 font-medium bg-white/90 border border-sky-200/80 p-2 rounded-lg mt-1.5 leading-relaxed">
+              🌟 大人も子どもも、地域の皆様も大歓迎！小学生の皆さんには「中学校ってどんなところ？」を体感していただける機会です。懐かしい母校の姿を見に、卒業生の皆様のご来校も心よりお待ちしております！
+            </p>
+          </div>
+
+          <!-- 第2部 -->
+          <div class="border border-amber-300 bg-amber-50/70 rounded-xl p-3.5 flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill bg-amber-600 text-white">第2部</span>
+              <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">【在校生限定】一般公開なし</span>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 mt-1">15:30 〜 17:15 全校生徒記念イベント</h3>
+            <p class="text-slate-700 leading-relaxed mt-0.5">
+              本校卒業生宮崎早織さん凱旋セレモニー（詳細は後日公開）<br>
+              <span class="text-[11px] text-amber-900 font-bold">※体育館収容人数・安全確保のため、一般の方の入場・観覧はできません。（ごめんなさい…！🙇‍♀️）</span>
+            </p>
+          </div>
+
+          <!-- フィナーレ -->
+          <div class="border border-indigo-200 bg-indigo-50/60 rounded-xl p-3.5 flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill bg-indigo-600 text-white">フィナーレ</span>
+              <span class="badge-pill bg-purple-100 text-purple-800 border border-purple-300">【在校生限定・任意参加】</span>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 mt-1">17:30頃 〜 創立80周年記念花火</h3>
+            <p class="text-slate-700 leading-relaxed mt-0.5">
+              第2部の締めくくりとして、在校生で楽しむ記念花火（約15分間）！（※雨天中止 / 任意参加 / 一般公開なし）
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 【スペシャルゲスト：宮崎早織選手】（明るく華やかなゴールドカード） -->
+    <section class="card-clean-white rounded-2xl p-5 shadow-sm border-2 border-amber-300 relative overflow-hidden">
+      <div class="flex items-center justify-between mb-2.5 border-b border-amber-100 pb-2">
+        <span class="badge-pill bg-amber-500 text-white uppercase tracking-wider">Special Guest</span>
+        <span class="badge-pill bg-amber-100 text-amber-900 border border-amber-200">与野東中 卒業生</span>
+      </div>
+
+      <h2 class="text-lg font-black text-slate-900 font-rounded mb-1 flex items-center gap-2">
+        🏀 宮崎 早織 選手 ご来校決定！
+      </h2>
+      <p class="text-xs text-slate-700 leading-relaxed mb-3">
+        女子バスケットボール元日本代表・オリンピック銀メダリストの宮崎早織選手（ENEOSサンフラワーズ）が、創立80周年のお祝いに母校へ駆けつけてくださいます！
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- 第1部：クリニック -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1.5 mb-1">
+              <span class="badge-pill bg-sky-600 text-white">第1部 13:00〜</span>
+              <span class="badge-pill bg-slate-200 text-slate-800">事前申込・抽選制</span>
+            </div>
+            <h3 class="text-xs font-black text-slate-900">小学生バスケクリニック</h3>
+            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+              地域ミニバスAチーム選手を対象とした特別講習会（協賛：青少年育成さいたま市民会議 与野東地区会／参加費無料）。
+            </p>
+          </div>
+          <div class="bg-white border border-amber-300 text-amber-900 text-[11px] font-bold text-center py-1.5 rounded-lg mt-2">
+            【近日公開】参加申込フォーム準備中
+          </div>
+        </div>
+
+        <!-- 第2部：全校記念イベント -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1.5 mb-1">
+              <span class="badge-pill bg-amber-600 text-white">第2部 15:30〜</span>
+              <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">在校生限定</span>
+            </div>
+            <h3 class="text-xs font-black text-slate-900">宮崎早織さん凱旋セレモニー</h3>
+            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+              全校生徒でお迎えする記念セレモニーを実施！（詳細プログラムは後日公開）
+            </p>
+          </div>
+          <p class="text-[10px] text-slate-400 mt-2">
+            ※当日の模様は後日、本サイトにて写真レポートを公開予定です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 【第1部（日中）：コンテンツラインナップ】 -->
+    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+        <div>
+          <span class="badge-pill bg-sky-600 text-white uppercase">Part 1</span>
+          <h2 class="text-base font-black text-slate-900 font-rounded mt-1">
+            第1部（10:00 〜 15:00）一般公開・部活動・有志団体・地域交流
+          </h2>
+        </div>
+        <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] px-3 py-1">どなたでも来場可（一般公開）</span>
+      </div>
+
+      <!-- 生徒有志ハイライトバナー（風神マスコットがひょっこり！） -->
+      <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 relative mt-2">
+        
+        <!-- ☁️ ひょっこり雲乗り風神マスコット（大きく存在感アップ！） -->
+        <div class="absolute -top-12 right-1 sm:right-2 flex items-end pointer-events-none z-20">
+          <div class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-sky-400 shadow-lg -mr-2 mb-3 z-10 animate-bounce" style="animation-delay: 1s;">
+            好きを咲かせよう！
+          </div>
+          <img src="./images/mascot_fujin.png" alt="雲乗り風神マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce" style="animation-delay: 1.5s;">
+        </div>
+
+        <div>
+          <span class="bg-white/20 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Student Project</span>
+          <h3 class="text-sm font-black mt-0.5">たくさんの生徒有志がエントリー！熱気あふれる発表＆展示</h3>
+          <p class="text-[11px] text-sky-100 mt-0.5">ダンス、バンド、作品展示、特技披露など、生徒たちの「好き」が集結！</p>
+        </div>
+        <span class="bg-white text-slate-900 text-xs font-black px-3 py-1.5 rounded-lg shrink-0 shadow-sm">
+          詳細 順次公開
+        </span>
+      </div>
+
+      <!-- プログラム一覧（見やすく明るいカードグリッド） -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- 吹奏楽部 -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
+            <span class="badge-pill bg-sky-100 text-sky-800">生演奏</span>
+          </div>
+          <h3 class="text-xs font-bold text-slate-900">🎺 吹奏楽部 記念コンサート</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">（タイムテーブルは後日発表）</p>
+        </div>
+
+        <!-- 先生バンド -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
+            <span class="badge-pill bg-slate-200 text-slate-600">Coming Soon</span>
+          </div>
+          <h3 class="text-xs font-bold text-slate-900">🎸 東風スペシャルバンド</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">続報乞うご期待！</p>
+        </div>
+
+        <!-- 地域・外部団体体験コンテンツ -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-bold text-indigo-600">校舎内（予定）</span>
+            <span class="badge-pill bg-indigo-100 text-indigo-800">地域・外部連携</span>
+          </div>
+          <h3 class="text-xs font-bold text-slate-900">🤝 地域・外部団体 特別体験コンテンツ</h3>
+          <p class="text-[11px] text-slate-600 mt-0.5">
+            地域連携コーディネーター連携による特別体験ブース！詳細コンテンツは10月中旬に公開予定です。
+          </p>
+        </div>
+
+        <!-- 部活動・学年体験 -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-bold text-emerald-600">校舎内・体育館</span>
+            <span class="badge-pill bg-emerald-100 text-emerald-800">展示・体験</span>
+          </div>
+          <h3 class="text-xs font-bold text-slate-900 mb-1">部活動・学年体験ブース（参加無料）</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-700 mt-1.5">
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🍵 茶道部</div>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🧪 理科部</div>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🎨 美術部</div>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🌟 9組</div>
+          </div>
+        </div>
+
+        <!-- キッチンカー -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-bold text-orange-600">昇降口前ロータリー</span>
+            <span class="badge-pill bg-orange-100 text-orange-800">テイクアウト軽食</span>
+          </div>
+          <h3 class="text-xs font-bold text-slate-900">🚚 絶品キッチンカー＆軽食エリア（10:00〜15:00）</h3>
+          <p class="text-[11px] text-slate-600 mt-0.5 leading-relaxed">
+            人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食指定スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
+    <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
+      <div class="flex items-center justify-between border-b border-orange-200/80 pb-2">
+        <div>
+          <span class="badge-pill bg-amber-600 text-white uppercase">Part 2</span>
+          <h2 class="text-base font-black text-slate-900 font-rounded mt-1">
+            第2部（15:30 〜 17:15）全校生徒記念イベント
+          </h2>
+        </div>
+        <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">【在校生限定】非公開</span>
+      </div>
+
+      <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-xs text-slate-800">
+        <strong class="text-amber-900 font-bold block text-sm">🏀 本校卒業生 宮崎早織さん 凱旋セレモニー</strong>
+        <p class="text-slate-700 leading-relaxed">
+          女子バスケットボール元日本代表・オリンピック銀メダリストの宮崎早織選手をお迎えし、全校生徒で創立80周年をお祝いする特別な記念イベントを実施します！（詳細プログラムは後日公開）
+        </p>
+      </div>
+
+      <p class="text-[11px] text-amber-950 bg-amber-100/80 p-2.5 rounded-xl font-medium leading-relaxed">
+        ※第2部は安全管理・体育館収容人数の都合上【在校生限定】となります（一般の方の入場・観覧はできません。ごめんなさい…！🙇‍♀️）。当日の熱気あふれる様子は後日、本サイトにて写真レポートを公開予定です！
+      </p>
+    </section>
+
+    <!-- 9. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
+    <section class="card-night-clean rounded-2xl p-5 shadow-xl relative overflow-hidden border border-purple-500/30">
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-2">
+          <span class="badge-pill bg-gradient-to-r from-pink-500 to-purple-500 text-white">17:30頃 〜 校庭</span>
+          <span class="badge-pill bg-purple-500/90 text-white font-bold">【在校生限定・任意参加】</span>
+        </div>
+        <span class="text-xs text-slate-400">※雨天中止</span>
+      </div>
+      <h2 class="text-lg font-black text-white font-rounded mb-1 flex items-center gap-2 text-shadow-firework">
+        🎆 創立80周年記念 花火（約15分間）
+      </h2>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        第2部記念イベントのグランドフィナーレを飾る、在校生のための記念花火！（※雨天中止 / 任意参加 / 第2部の延長プログラムとして実施するため、一般公開はございません）
+      </p>
+    </section>
+
+    <!-- 10. 【メッセージ ＆ 今後の情報更新について（Coming Soon）】 -->
+    <section class="bg-slate-900/90 backdrop-blur-md rounded-2xl p-5 border border-sky-500/30 shadow-xl text-center space-y-3 relative overflow-hidden">
+      <div class="inline-flex items-center gap-1 bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full text-[11px] font-bold">
+        <span>✨</span> 創立80周年を迎えて ＆ 今後の更新情報
+      </div>
+      <h3 class="text-base sm:text-lg font-black text-white font-rounded leading-snug">
+        歴史をつなぎ、未来へひらく特別な一日を。
+      </h3>
+      <p class="text-xs text-slate-300 leading-relaxed max-w-lg mx-auto">
+        さいたま市立与野東中学校は、生徒・保護者・地域の皆様・歴代卒業生の温かい支えを受け、創立80周年という大きな節目を迎えました。<br>
+        本文化祭特設サイトは、開催に向けて<strong>【10月中旬頃】</strong>に詳細タイムテーブル、出店キッチンカー情報、地域体験ブースの全貌などを順次公開・アップデートしてまいります！
+      </p>
+      <div class="pt-2">
+        <span class="inline-block bg-white/10 text-sky-200 text-[11px] font-bold px-3.5 py-1.5 rounded-full border border-white/10">
+          📱 ぜひ本ページをブックマークして、最新情報をお待ちください！
+        </span>
+      </div>
+    </section>
+
+    <!-- 11. 【フッター・クレジット】（夜空に映える高コントラスト・高視認性デザイン） -->
+    <footer class="text-center text-xs text-slate-300 py-8 flex flex-col gap-3.5 border-t border-slate-800/80 mt-2">
+      <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-4 border border-slate-700/60 shadow-lg space-y-2">
+        <div>
+          <strong class="text-sky-300 font-black tracking-wide block mb-0.5">主催・共催</strong>
+          <span class="text-white font-medium">さいたま市立与野東中学校 創立80周年記念事業実行委員会 / さいたま市立与野東中学校PTA</span>
+        </div>
+        <div class="pt-2 border-t border-slate-800">
+          <strong class="text-sky-300 font-black tracking-wide block mb-0.5">後援・協賛</strong>
+          <span class="text-slate-200">青少年育成さいたま市民会議 与野東地区会 / 上落合自治会 / 下落合自治会 / 与野東中学校後援会</span>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-400">
+        &copy; 2026 さいたま市立与野東中学校 創立80周年記念事業実行委員会
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- スクリプト群 -->
+  <script>
+    // 1. カウントダウンタイマー
+    function updateCountdown() {
+      const targetDate = new Date('2026-11-07T10:00:00+09:00').getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        document.getElementById('timer-days').innerText = '00';
+        document.getElementById('timer-hours').innerText = '00';
+        document.getElementById('timer-mins').innerText = '00';
+        document.getElementById('timer-secs').innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById('timer-days').innerText = String(days).padStart(2, '0');
+      document.getElementById('timer-hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('timer-mins').innerText = String(minutes).padStart(2, '0');
+      document.getElementById('timer-secs').innerText = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 2. お問い合わせフォームのページ内開閉トグル
+    const toggleFormBtn = document.getElementById('toggle-form-btn');
+    const formContainer = document.getElementById('embedded-form-container');
+    if (toggleFormBtn && formContainer) {
+      toggleFormBtn.addEventListener('click', function() {
+        const isHidden = formContainer.classList.contains('hidden');
+        if (isHidden) {
+          formContainer.classList.remove('hidden');
+          toggleFormBtn.innerHTML = `<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg> 閉じる`;
+        } else {
+          formContainer.classList.add('hidden');
+          toggleFormBtn.innerHTML = `<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg> ページ内で表示`;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
