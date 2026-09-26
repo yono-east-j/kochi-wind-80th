@@ -289,6 +289,60 @@
       50% { transform: scale(1.25) rotate(15deg); opacity: 1; filter: drop-shadow(0 0 4px #f59e0b); }
     }
 
+    /* 🌸 インラインで咲いて揺れる可愛いお花アニメーション */
+    .inline-flower-float {
+      display: inline-block;
+      animation: inline-flower-sway 4s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    .inline-flower-spin {
+      display: inline-block;
+      animation: inline-flower-rotate 7s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    @keyframes inline-flower-sway {
+      0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+      50% { transform: translateY(-4px) rotate(10deg) scale(1.1); filter: drop-shadow(0 2px 6px rgba(244, 114, 182, 0.4)); }
+    }
+    @keyframes inline-flower-rotate {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(20deg) scale(1.12); filter: drop-shadow(0 2px 6px rgba(56, 189, 248, 0.4)); }
+    }
+
+    /* 🎆 夜空カード内のキラキラ花火アニメーション */
+    .card-firework-pulse {
+      animation: card-fw-pulse 3s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    @keyframes card-fw-pulse {
+      0%, 100% { transform: scale(0.9) rotate(0deg); opacity: 0.6; }
+      50% { transform: scale(1.15) rotate(15deg); opacity: 1; filter: drop-shadow(0 0 8px #f472b6); }
+    }
+
+    /* 🌸 画面タップ・クリックでその場に花が咲くインタラクティブエフェクト */
+    .tap-bloom-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      animation: tap-bloom-anim 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      user-select: none;
+    }
+    @keyframes tap-bloom-anim {
+      0% {
+        transform: translate(-50%, -50%) scale(0) rotate(-40deg);
+        opacity: 1;
+      }
+      40% {
+        transform: translate(-50%, -50%) scale(1.35) rotate(15deg);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translate(-50%, -80%) scale(1.5) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
   </style>
 </head>
 <body class="antialiased selection:bg-sky-500 selection:text-white pb-16 relative overflow-x-hidden min-h-screen">
@@ -299,62 +353,62 @@
     <!-- ═══ 1. 【青空・日中ゾーン（ページ上部〜中部）：お花のみ】 ═══ -->
     
     <!-- 花1: ピンク（ヘッダー付近） -->
-    <svg class="bloom-flower" style="top: 3%; left: 4%; width: 42px; height: 42px; animation-duration: 9s; animation-delay: 0s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#fda4af" opacity="0.85"/>
-      <circle cx="78" cy="42" r="18" fill="#fda4af" opacity="0.85"/>
-      <circle cx="68" cy="76" r="18" fill="#fda4af" opacity="0.85"/>
-      <circle cx="32" cy="76" r="18" fill="#fda4af" opacity="0.85"/>
-      <circle cx="22" cy="42" r="18" fill="#fda4af" opacity="0.85"/>
+    <svg class="bloom-flower" style="top: 2%; left: 1%; width: 48px; height: 48px; animation-duration: 9s; animation-delay: 0s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fda4af" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#fda4af" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#fda4af" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#fda4af" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#fda4af" opacity="0.9"/>
       <circle cx="50" cy="50" r="14" fill="#fef08a"/>
     </svg>
 
     <!-- 花2: スカイブルー（タイマー付近） -->
-    <svg class="bloom-flower-spin" style="top: 10%; right: 5%; width: 38px; height: 38px; animation-duration: 11s; animation-delay: 2.5s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#7dd3fc" opacity="0.85"/>
-      <circle cx="78" cy="42" r="18" fill="#7dd3fc" opacity="0.85"/>
-      <circle cx="68" cy="76" r="18" fill="#7dd3fc" opacity="0.85"/>
-      <circle cx="32" cy="76" r="18" fill="#7dd3fc" opacity="0.85"/>
-      <circle cx="22" cy="42" r="18" fill="#7dd3fc" opacity="0.85"/>
+    <svg class="bloom-flower-spin" style="top: 9%; right: 1%; width: 46px; height: 46px; animation-duration: 11s; animation-delay: 2.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#7dd3fc" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#7dd3fc" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#7dd3fc" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#7dd3fc" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#7dd3fc" opacity="0.9"/>
       <circle cx="50" cy="50" r="14" fill="#ffffff"/>
     </svg>
 
     <!-- 花3: サンシャインイエロー（開催概要付近） -->
-    <svg class="bloom-flower" style="top: 22%; left: 5%; width: 46px; height: 46px; animation-duration: 10s; animation-delay: 4.5s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#fde047" opacity="0.9"/>
-      <circle cx="78" cy="42" r="18" fill="#fde047" opacity="0.9"/>
-      <circle cx="68" cy="76" r="18" fill="#fde047" opacity="0.9"/>
-      <circle cx="32" cy="76" r="18" fill="#fde047" opacity="0.9"/>
-      <circle cx="22" cy="42" r="18" fill="#fde047" opacity="0.9"/>
+    <svg class="bloom-flower" style="top: 20%; left: 1%; width: 50px; height: 50px; animation-duration: 10s; animation-delay: 4.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fde047" opacity="0.95"/>
+      <circle cx="78" cy="42" r="18" fill="#fde047" opacity="0.95"/>
+      <circle cx="68" cy="76" r="18" fill="#fde047" opacity="0.95"/>
+      <circle cx="32" cy="76" r="18" fill="#fde047" opacity="0.95"/>
+      <circle cx="22" cy="42" r="18" fill="#fde047" opacity="0.95"/>
       <circle cx="50" cy="50" r="14" fill="#fb923c"/>
     </svg>
 
     <!-- 花4: コーラルローズ（宮崎選手ゲスト付近） -->
-    <svg class="bloom-flower-spin" style="top: 36%; right: 4%; width: 44px; height: 44px; animation-duration: 12s; animation-delay: 1.5s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#fb7185" opacity="0.85"/>
-      <circle cx="78" cy="42" r="18" fill="#fb7185" opacity="0.85"/>
-      <circle cx="68" cy="76" r="18" fill="#fb7185" opacity="0.85"/>
-      <circle cx="32" cy="76" r="18" fill="#fb7185" opacity="0.85"/>
-      <circle cx="22" cy="42" r="18" fill="#fb7185" opacity="0.85"/>
+    <svg class="bloom-flower-spin" style="top: 34%; right: 1%; width: 48px; height: 48px; animation-duration: 12s; animation-delay: 1.5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fb7185" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#fb7185" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#fb7185" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#fb7185" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#fb7185" opacity="0.9"/>
       <circle cx="50" cy="50" r="14" fill="#fef08a"/>
     </svg>
 
     <!-- 花5: ミントグリーン（第1部コンテンツ上部） -->
-    <svg class="bloom-flower" style="top: 48%; left: 4%; width: 40px; height: 40px; animation-duration: 11.5s; animation-delay: 5s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#6ee7b7" opacity="0.85"/>
-      <circle cx="78" cy="42" r="18" fill="#6ee7b7" opacity="0.85"/>
-      <circle cx="68" cy="76" r="18" fill="#6ee7b7" opacity="0.85"/>
-      <circle cx="32" cy="76" r="18" fill="#6ee7b7" opacity="0.85"/>
-      <circle cx="22" cy="42" r="18" fill="#6ee7b7" opacity="0.85"/>
+    <svg class="bloom-flower" style="top: 46%; left: 1%; width: 46px; height: 46px; animation-duration: 11.5s; animation-delay: 5s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#6ee7b7" opacity="0.9"/>
+      <circle cx="78" cy="42" r="18" fill="#6ee7b7" opacity="0.9"/>
+      <circle cx="68" cy="76" r="18" fill="#6ee7b7" opacity="0.9"/>
+      <circle cx="32" cy="76" r="18" fill="#6ee7b7" opacity="0.9"/>
+      <circle cx="22" cy="42" r="18" fill="#6ee7b7" opacity="0.9"/>
       <circle cx="50" cy="50" r="14" fill="#ffffff"/>
     </svg>
 
     <!-- 花6: オレンジブロッサム（第1部ブース下部） -->
-    <svg class="bloom-flower-spin" style="top: 59%; right: 5%; width: 42px; height: 42px; animation-duration: 10s; animation-delay: 2s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#fed7aa" opacity="0.9"/>
-      <circle cx="78" cy="42" r="18" fill="#fed7aa" opacity="0.9"/>
-      <circle cx="68" cy="76" r="18" fill="#fed7aa" opacity="0.9"/>
-      <circle cx="32" cy="76" r="18" fill="#fed7aa" opacity="0.9"/>
-      <circle cx="22" cy="42" r="18" fill="#fed7aa" opacity="0.9"/>
+    <svg class="bloom-flower-spin" style="top: 57%; right: 1%; width: 48px; height: 48px; animation-duration: 10s; animation-delay: 2s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#fed7aa" opacity="0.95"/>
+      <circle cx="78" cy="42" r="18" fill="#fed7aa" opacity="0.95"/>
+      <circle cx="68" cy="76" r="18" fill="#fed7aa" opacity="0.95"/>
+      <circle cx="32" cy="76" r="18" fill="#fed7aa" opacity="0.95"/>
+      <circle cx="22" cy="42" r="18" fill="#fed7aa" opacity="0.95"/>
       <circle cx="50" cy="50" r="14" fill="#f97316"/>
     </svg>
 
@@ -362,17 +416,17 @@
     <!-- ═══ 2. 【夕暮れグラデーション移行部：お花と花火のやさしい重なり】 ═══ -->
     
     <!-- 夕暮れ花: トワイライトパープル（第2部記念イベントゾーン） -->
-    <svg class="bloom-flower-spin" style="top: 69%; left: 4%; width: 44px; height: 44px; animation-duration: 9.5s; animation-delay: 3s;" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="22" r="18" fill="#c084fc" opacity="0.8"/>
-      <circle cx="78" cy="42" r="18" fill="#c084fc" opacity="0.8"/>
-      <circle cx="68" cy="76" r="18" fill="#c084fc" opacity="0.8"/>
-      <circle cx="32" cy="76" r="18" fill="#c084fc" opacity="0.8"/>
-      <circle cx="22" cy="42" r="18" fill="#c084fc" opacity="0.8"/>
+    <svg class="bloom-flower-spin" style="top: 67%; left: 1%; width: 48px; height: 48px; animation-duration: 9.5s; animation-delay: 3s;" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="22" r="18" fill="#c084fc" opacity="0.85"/>
+      <circle cx="78" cy="42" r="18" fill="#c084fc" opacity="0.85"/>
+      <circle cx="68" cy="76" r="18" fill="#c084fc" opacity="0.85"/>
+      <circle cx="32" cy="76" r="18" fill="#c084fc" opacity="0.85"/>
+      <circle cx="22" cy="42" r="18" fill="#c084fc" opacity="0.85"/>
       <circle cx="50" cy="50" r="14" fill="#fef08a"/>
     </svg>
 
     <!-- 重なり花火1: ローズピンク＆ゴールドの序曲花火（夕暮れから夜空への境界・右側） -->
-    <svg class="bloom-firework" style="top: 73%; right: 4%; width: 80px; height: 80px; color: #f43f5e; animation-duration: 6.5s; animation-delay: 0.5s;" viewBox="0 0 120 120" fill="none">
+    <svg class="bloom-firework" style="top: 71%; right: 1%; width: 85px; height: 85px; color: #f43f5e; animation-duration: 6.5s; animation-delay: 0.5s;" viewBox="0 0 120 120" fill="none">
       <g stroke="url(#fw-grad1)" stroke-width="3" stroke-linecap="round">
         <line x1="60" y1="10" x2="60" y2="35"/>
         <line x1="60" y1="110" x2="60" y2="85"/>
@@ -534,32 +588,38 @@
   <div class="max-w-xl mx-auto px-4 pt-4 flex flex-col gap-6 relative z-10">
 
     <!-- 2. 【メインヘッダー：爽やかな東風の青空 ＆ 公式スローガン】 -->
-    <header class="text-center pt-3 pb-1 flex flex-col items-center gap-3">
-      <!-- 80周年記念バッジ -->
-      <div class="inline-flex items-center gap-1.5 bg-white text-sky-800 border border-sky-200 px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase shadow-sm wave-badge">
+    <header class="text-center pt-3 pb-1 flex flex-col items-center gap-3 relative">
+      <!-- 80周年記念バッジ（可愛いお花付き） -->
+      <div class="inline-flex items-center gap-2 bg-white text-sky-800 border border-sky-200 px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase shadow-sm wave-badge">
+        <span class="inline-flower-float text-sm">🌸</span>
         <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        さいたま市立与野東中学校 創立80周年
+        <span>さいたま市立与野東中学校 創立80周年</span>
+        <span class="inline-flower-spin text-sm">🌼</span>
       </div>
 
-      <!-- メインタイトル -->
-      <div>
+      <!-- メインタイトル＆キャッチコピー -->
+      <div class="space-y-1">
         <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug font-rounded">
           創立80周年記念文化祭
         </h1>
-        <p class="text-xs sm:text-sm text-sky-950 font-bold tracking-wide mt-1">
+        <p class="text-xs sm:text-sm text-sky-950 font-bold tracking-wide">
           〜 未来を迎えに行こう。私の「好き」がひらく一日 〜
         </p>
       </div>
 
       <!-- 在校生投票で決定！80周年公式スローガンフレーム（マスコットがひょっこり！） -->
-      <div class="w-full bg-white rounded-2xl p-4 border border-sky-200 shadow-sm flex flex-col items-center gap-1 relative">
+      <div class="w-full bg-white rounded-2xl p-4 sm:p-5 pt-6 sm:pt-6 border border-sky-200 shadow-sm flex flex-col items-center gap-1.5 relative mt-8 sm:mt-9">
         
+        <!-- 🌸 スローガン枠の左上・右下を彩る可愛いお花デコレーション -->
+        <div class="absolute -top-3 -left-2 text-xl inline-flower-float pointer-events-none select-none">🌸</div>
+        <div class="absolute -bottom-3 -left-1 text-base inline-flower-spin pointer-events-none select-none">🌼</div>
+
         <!-- 🍃 ひょっこり東風マスコット（タップ・クリックでメッセージが変わるインタラクティブ演出！） -->
-        <div id="mascot-higashikaze-btn" onclick="talkHigashikaze()" class="absolute -top-12 -right-3 sm:-right-4 flex items-end cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風くんをタップしてね！">
-          <div id="mascot-speech-bubble" class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-amber-300 shadow-lg -mr-2 mb-4 z-10 animate-bounce transition-all">
+        <div id="mascot-higashikaze-btn" onclick="talkHigashikaze()" class="absolute -top-11 sm:-top-12 -right-1 sm:right-1 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風くんをタップしてね！">
+          <div id="mascot-speech-bubble" class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-3 py-1 rounded-full border-2 border-amber-300 shadow-md mb-1 sm:mb-0 sm:-mr-2 z-10 animate-bounce transition-all whitespace-nowrap text-center max-w-[200px] sm:max-w-none">
             東風に乗ろう！
           </div>
-          <img id="mascot-higashikaze-img" src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce group-hover:rotate-6 transition-transform">
+          <img id="mascot-higashikaze-img" src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain filter drop-shadow-lg mascot-bounce group-hover:rotate-6 transition-transform">
         </div>
 
         <span class="badge-pill bg-sky-100 text-sky-800 border border-sky-200 uppercase text-[10px]">
@@ -847,11 +907,14 @@
     </section>
 
     <!-- 8. 【第1部（日中）：コンテンツラインナップ】 -->
-    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-2.5">
-        <div>
-          <span class="badge-pill bg-sky-600 text-white uppercase">Part 1</span>
-          <h2 class="text-base font-black text-slate-900 font-rounded mt-1 leading-snug">
+    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 relative">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 border-b border-slate-100 pb-2.5">
+        <div class="sm:max-w-[70%]">
+          <div class="flex items-center gap-1.5 mb-0.5">
+            <span class="badge-pill bg-sky-600 text-white uppercase">Part 1</span>
+            <span class="inline-flower-float text-xs">🌸</span>
+          </div>
+          <h2 class="text-sm sm:text-base font-black text-slate-900 font-rounded leading-snug">
             第1部（10:00 〜 15:00）一般公開<br class="hidden sm:inline">・部活動・有志団体・地域交流
           </h2>
         </div>
@@ -861,14 +924,14 @@
       </div>
 
       <!-- 生徒有志ハイライトバナー（東風パパがひょっこり！） -->
-      <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 relative mt-2">
+      <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 relative mt-7 sm:mt-8">
         
         <!-- ☁️ ひょっこり雲乗り東風パパ（タップで楽しいメッセージ！） -->
-        <div id="mascot-fujin-btn" onclick="talkFujin()" class="absolute -top-12 right-1 sm:right-2 flex items-end cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" style="animation-delay: 1s;" title="東風パパをタップしてね！">
-          <div id="mascot-fujin-bubble" class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-sky-400 shadow-lg -mr-2 mb-3 z-10 animate-bounce transition-all">
+        <div id="mascot-fujin-btn" onclick="talkFujin()" class="absolute -top-11 -right-1 sm:right-2 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風パパをタップしてね！">
+          <div id="mascot-fujin-bubble" class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-3 py-1 rounded-full border-2 border-sky-400 shadow-md mb-1 sm:mb-0 sm:-mr-2 z-10 animate-bounce transition-all whitespace-nowrap text-center max-w-[200px] sm:max-w-none">
             好きを咲かせよう！
           </div>
-          <img id="mascot-fujin-img" src="./images/mascot_fujin.png" alt="雲乗り東風パパ マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce group-hover:rotate-6 transition-transform" style="animation-delay: 1.5s;">
+          <img id="mascot-fujin-img" src="./images/mascot_fujin.png" alt="雲乗り東風パパ マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain filter drop-shadow-lg mascot-bounce group-hover:rotate-6 transition-transform">
         </div>
 
         <div>
@@ -945,8 +1008,11 @@
     </section>
 
     <!-- 9. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
-    <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
-      <div class="border-b border-orange-200/80 pb-2.5 flex flex-col gap-1.5">
+    <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 relative overflow-hidden">
+      <!-- 🌸 夕暮れのお花デコレーション（スマホでもしっかり見える） -->
+      <div class="absolute -top-1 -right-1 text-2xl inline-flower-spin opacity-80 pointer-events-none select-none">🌺</div>
+
+      <div class="border-b border-orange-200/80 pb-2.5 flex flex-col gap-1.5 relative z-10">
         <div class="flex items-center gap-2">
           <span class="badge-pill bg-amber-600 text-white uppercase">Part 2</span>
           <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300 text-xs font-bold px-2.5 py-0.5">【在校生限定】非公開</span>
@@ -956,31 +1022,74 @@
         </h2>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-xs text-slate-800">
+      <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-xs text-slate-800 relative z-10">
         <strong class="text-amber-900 font-bold block text-sm">🏀 本校卒業生 宮崎早織さん 凱旋セレモニー</strong>
         <p class="text-slate-700 leading-relaxed">
           女子バスケットボール元日本代表・東京オリンピック銀メダリストの宮崎早織さんをお迎えし、全校生徒で創立80周年をお祝いする特別な記念イベントを実施します！（詳細プログラムは後日公開）
         </p>
       </div>
 
-      <p class="text-[11px] text-amber-950 bg-amber-100/80 p-2.5 rounded-xl font-medium leading-relaxed">
+      <p class="text-[11px] text-amber-950 bg-amber-100/80 p-2.5 rounded-xl font-medium leading-relaxed relative z-10">
         ※第2部は安全管理・体育館収容人数の都合上【在校生限定】となります（一般の方の入場・観覧はできません。ごめんなさい…！🙇‍♀️）。当日の熱気あふれる様子は後日、本サイトにて写真レポートを公開予定です！
       </p>
     </section>
 
     <!-- 10. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
     <section class="card-night-clean rounded-2xl p-5 shadow-xl relative overflow-hidden border border-purple-500/30">
-      <div class="flex items-center justify-between mb-2">
+      
+      <!-- 🎆 カード内蔵型：スマホでも確実に咲き誇るキラキラ大輪花火アニメーション（右肩＆左下） -->
+      <div class="absolute -top-3 -right-3 w-24 h-24 card-firework-pulse pointer-events-none opacity-85 z-0">
+        <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
+          <g stroke="url(#card-fw-grad)" stroke-width="2.5" stroke-linecap="round">
+            <line x1="50" y1="10" x2="50" y2="30"/>
+            <line x1="50" y1="90" x2="50" y2="70"/>
+            <line x1="10" y1="50" x2="30" y2="50"/>
+            <line x1="90" y1="50" x2="70" y2="50"/>
+            <line x1="22" y1="22" x2="36" y2="36"/>
+            <line x1="78" y1="78" x2="64" y2="64"/>
+            <line x1="22" y1="78" x2="36" y2="64"/>
+            <line x1="78" y1="22" x2="64" y2="36"/>
+          </g>
+          <circle cx="50" cy="50" r="7" fill="#ffffff" filter="drop-shadow(0 0 6px #f472b6)"/>
+          <circle cx="50" cy="6" r="3.5" fill="#fde047"/>
+          <circle cx="50" cy="94" r="3.5" fill="#fde047"/>
+          <circle cx="6" cy="50" r="3.5" fill="#fde047"/>
+          <circle cx="94" cy="50" r="3.5" fill="#fde047"/>
+          <defs>
+            <linearGradient id="card-fw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fde047"/>
+              <stop offset="100%" stop-color="#ec4899"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="absolute -bottom-4 -left-3 w-20 h-20 card-firework-pulse pointer-events-none opacity-70 z-0" style="animation-delay: 1.5s;">
+        <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
+          <g stroke="#38bdf8" stroke-width="2" stroke-linecap="round">
+            <line x1="50" y1="15" x2="50" y2="32"/>
+            <line x1="50" y1="85" x2="50" y2="68"/>
+            <line x1="15" y1="50" x2="32" y2="50"/>
+            <line x1="85" y1="50" x2="68" y2="50"/>
+            <line x1="25" y1="25" x2="37" y2="37"/>
+            <line x1="75" y1="75" x2="63" y2="63"/>
+            <line x1="25" y1="75" x2="37" y2="63"/>
+            <line x1="75" y1="25" x2="63" y2="37"/>
+          </g>
+          <circle cx="50" cy="50" r="5" fill="#ffffff"/>
+        </svg>
+      </div>
+
+      <div class="flex items-center justify-between mb-2 relative z-10">
         <div class="flex items-center gap-2">
           <span class="badge-pill bg-gradient-to-r from-pink-500 to-purple-500 text-white">17:30頃 〜 校庭</span>
           <span class="badge-pill bg-purple-500/90 text-white font-bold">【在校生限定・任意参加】</span>
         </div>
         <span class="text-xs text-slate-400">※雨天中止</span>
       </div>
-      <h2 class="text-lg font-black text-white font-rounded mb-1 flex items-center gap-2 text-shadow-firework">
+      <h2 class="text-lg font-black text-white font-rounded mb-1 flex items-center gap-2 text-shadow-firework relative z-10">
         🎆 創立80周年記念 花火（約15分間）
       </h2>
-      <p class="text-xs text-slate-300 leading-relaxed">
+      <p class="text-xs text-slate-300 leading-relaxed relative z-10">
         第2部記念イベントのグランドフィナーレを飾る、在校生のための記念花火！（※雨天中止 / 任意参加 / 第2部の延長プログラムとして実施するため、一般公開はございません）
       </p>
     </section>
@@ -1141,6 +1250,35 @@
         }
       });
     }
+
+    // 6. 🌸 画面タップ・クリックで「好きの花が咲く🌸 / 夜空ゾーンで花火が上がる🎆」演出
+    (function() {
+      const flowerEmojis = ['🌸', '🌼', '🌺', '🌻', '🌷', '✨', '🍀'];
+      const fireworkEmojis = ['🎆', '🎇', '✨', '🌟', '💖', '💫'];
+
+      function spawnBloom(clientX, clientY) {
+        if (!clientX || !clientY) return;
+        const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+        const isNight = scrollPercent > 0.75;
+        const list = isNight ? fireworkEmojis : flowerEmojis;
+        const emoji = list[Math.floor(Math.random() * list.length)];
+
+        const particle = document.createElement('div');
+        particle.className = 'tap-bloom-particle text-2xl sm:text-3xl filter drop-shadow-md';
+        particle.textContent = emoji;
+        particle.style.left = clientX + 'px';
+        particle.style.top = clientY + 'px';
+
+        document.body.appendChild(particle);
+        setTimeout(() => {
+          particle.remove();
+        }, 850);
+      }
+
+      document.addEventListener('click', function(e) {
+        spawnBloom(e.clientX, e.clientY);
+      }, { passive: true });
+    })();
   </script>
 </body>
 </html>
