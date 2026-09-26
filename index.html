@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>さいたま市立与野東中学校 創立80周年記念文化祭 | 公式特設サイト</title>
   
+  <!-- 📊 アクセス解析（Google Analytics 4 / 測定IDを設定してご利用いただけます） -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // ※広報チームまたは学校のGA4測定IDをここに入力
+  </script>
+  -->
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -544,12 +554,12 @@
       <!-- 在校生投票で決定！80周年公式スローガンフレーム（マスコットがひょっこり！） -->
       <div class="w-full bg-white rounded-2xl p-4 border border-sky-200 shadow-sm flex flex-col items-center gap-1 relative">
         
-        <!-- 🍃 ひょっこり東風マスコット（うちわ持ち・大きく存在感アップ！） -->
-        <div class="absolute -top-12 -right-3 sm:-right-4 flex items-end pointer-events-none z-20">
-          <div class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-amber-300 shadow-lg -mr-2 mb-4 z-10 animate-bounce">
+        <!-- 🍃 ひょっこり東風マスコット（タップ・クリックでメッセージが変わるインタラクティブ演出！） -->
+        <div id="mascot-higashikaze-btn" onclick="talkHigashikaze()" class="absolute -top-12 -right-3 sm:-right-4 flex items-end cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風くんをタップしてね！">
+          <div id="mascot-speech-bubble" class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-amber-300 shadow-lg -mr-2 mb-4 z-10 animate-bounce transition-all">
             東風に乗ろう！
           </div>
-          <img src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce">
+          <img id="mascot-higashikaze-img" src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce group-hover:rotate-6 transition-transform">
         </div>
 
         <span class="badge-pill bg-sky-100 text-sky-800 border border-sky-200 uppercase text-[10px]">
@@ -743,12 +753,12 @@
       <div class="space-y-3 text-xs text-slate-700">
         <div class="grid grid-cols-1 gap-2.5">
           <!-- 第1部 -->
-          <div class="border-2 border-sky-400/40 bg-sky-50/70 rounded-xl p-3.5 flex flex-col gap-1">
-            <div class="flex items-center justify-between">
+          <div class="border-2 border-sky-400/40 bg-sky-50/70 rounded-xl p-3.5 flex flex-col gap-1.5">
+            <div class="flex flex-wrap items-center justify-between gap-1.5">
               <span class="badge-pill bg-sky-600 text-white">第1部</span>
               <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] px-2.5 py-0.5">どなたでも来場可（一般公開）</span>
             </div>
-            <h3 class="text-sm font-black text-slate-900 mt-1">10:00 〜 15:00 一般公開・部活動・有志団体・地域交流</h3>
+            <h3 class="text-sm font-black text-slate-900 mt-0.5 leading-snug">10:00 〜 15:00 一般公開・部活動・有志団体・地域交流</h3>
             <p class="text-slate-700 leading-relaxed mt-0.5">
               吹奏楽部生演奏、生徒有志の発表・展示、体験ワークショップ、絶品キッチンカーなど
             </p>
@@ -758,12 +768,12 @@
           </div>
 
           <!-- 第2部 -->
-          <div class="border border-amber-300 bg-amber-50/70 rounded-xl p-3.5 flex flex-col gap-1">
-            <div class="flex items-center justify-between">
+          <div class="border border-amber-300 bg-amber-50/70 rounded-xl p-3.5 flex flex-col gap-1.5">
+            <div class="flex flex-wrap items-center justify-between gap-1.5">
               <span class="badge-pill bg-amber-600 text-white">第2部</span>
-              <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">【在校生限定】一般公開なし</span>
+              <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300 font-bold text-[11px] px-2 py-0.5">【在校生限定】一般公開なし</span>
             </div>
-            <h3 class="text-sm font-black text-slate-900 mt-1">15:30 〜 17:15 全校生徒記念イベント</h3>
+            <h3 class="text-sm font-black text-slate-900 mt-0.5 leading-snug">15:30 〜 17:15 全校生徒記念イベント</h3>
             <p class="text-slate-700 leading-relaxed mt-0.5">
               本校卒業生宮崎早織さん凱旋セレモニー（詳細は後日公開）<br>
               <span class="text-[11px] text-amber-900 font-bold">※体育館収容人数・安全確保のため、一般の方の入場・観覧はできません。（ごめんなさい…！🙇‍♀️）</span>
@@ -785,7 +795,7 @@
       </div>
     </section>
 
-    <!-- 7. 【スペシャルゲスト：宮崎早織選手】（明るく華やかなゴールドカード） -->
+    <!-- 7. 【スペシャルゲスト：宮崎早織さん】（明るく華やかなゴールドカード） -->
     <section class="card-clean-white rounded-2xl p-5 shadow-sm border-2 border-amber-300 relative overflow-hidden">
       <div class="flex items-center justify-between mb-2.5 border-b border-amber-100 pb-2">
         <span class="badge-pill bg-amber-500 text-white uppercase tracking-wider">Special Guest</span>
@@ -793,10 +803,10 @@
       </div>
 
       <h2 class="text-lg font-black text-slate-900 font-rounded mb-1 flex items-center gap-2">
-        🏀 宮崎 早織 選手 ご来校決定！
+        🏀 宮崎 早織 さん ご来校決定！
       </h2>
       <p class="text-xs text-slate-700 leading-relaxed mb-3">
-        女子バスケットボール元日本代表・オリンピック銀メダリストの宮崎早織選手（ENEOSサンフラワーズ）が、創立80周年のお祝いに母校へ駆けつけてくださいます！
+        女子バスケットボール元日本代表・東京オリンピック銀メダリストの宮崎早織さんが、創立80周年のお祝いに母校へ駆けつけてくださいます！
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -836,27 +846,29 @@
       </div>
     </section>
 
-    <!-- 7. 【第1部（日中）：コンテンツラインナップ】 -->
+    <!-- 8. 【第1部（日中）：コンテンツラインナップ】 -->
     <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-2.5">
         <div>
           <span class="badge-pill bg-sky-600 text-white uppercase">Part 1</span>
-          <h2 class="text-base font-black text-slate-900 font-rounded mt-1">
-            第1部（10:00 〜 15:00）一般公開・部活動・有志団体・地域交流
+          <h2 class="text-base font-black text-slate-900 font-rounded mt-1 leading-snug">
+            第1部（10:00 〜 15:00）一般公開<br class="hidden sm:inline">・部活動・有志団体・地域交流
           </h2>
         </div>
-        <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] px-3 py-1">どなたでも来場可（一般公開）</span>
+        <div class="shrink-0 self-start sm:self-auto">
+          <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] sm:text-xs px-3 py-1">どなたでも来場可（一般公開）</span>
+        </div>
       </div>
 
-      <!-- 生徒有志ハイライトバナー（風神マスコットがひょっこり！） -->
+      <!-- 生徒有志ハイライトバナー（東風パパがひょっこり！） -->
       <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 relative mt-2">
         
-        <!-- ☁️ ひょっこり雲乗り風神マスコット（大きく存在感アップ！） -->
-        <div class="absolute -top-12 right-1 sm:right-2 flex items-end pointer-events-none z-20">
-          <div class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-sky-400 shadow-lg -mr-2 mb-3 z-10 animate-bounce" style="animation-delay: 1s;">
+        <!-- ☁️ ひょっこり雲乗り東風パパ（タップで楽しいメッセージ！） -->
+        <div id="mascot-fujin-btn" onclick="talkFujin()" class="absolute -top-12 right-1 sm:right-2 flex items-end cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" style="animation-delay: 1s;" title="東風パパをタップしてね！">
+          <div id="mascot-fujin-bubble" class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-2.5 py-1 rounded-full border-2 border-sky-400 shadow-lg -mr-2 mb-3 z-10 animate-bounce transition-all">
             好きを咲かせよう！
           </div>
-          <img src="./images/mascot_fujin.png" alt="雲乗り風神マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce" style="animation-delay: 1.5s;">
+          <img id="mascot-fujin-img" src="./images/mascot_fujin.png" alt="雲乗り東風パパ マスコットキャラクター" class="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-xl mascot-bounce group-hover:rotate-6 transition-transform" style="animation-delay: 1.5s;">
         </div>
 
         <div>
@@ -932,22 +944,22 @@
       </div>
     </section>
 
-    <!-- 8. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
+    <!-- 9. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
     <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5">
-      <div class="flex items-center justify-between border-b border-orange-200/80 pb-2">
-        <div>
+      <div class="border-b border-orange-200/80 pb-2.5 flex flex-col gap-1.5">
+        <div class="flex items-center gap-2">
           <span class="badge-pill bg-amber-600 text-white uppercase">Part 2</span>
-          <h2 class="text-base font-black text-slate-900 font-rounded mt-1">
-            第2部（15:30 〜 17:15）全校生徒記念イベント
-          </h2>
+          <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300 text-xs font-bold px-2.5 py-0.5">【在校生限定】非公開</span>
         </div>
-        <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">【在校生限定】非公開</span>
+        <h2 class="text-base font-black text-slate-900 font-rounded leading-snug">
+          第2部（15:30 〜 17:15）全校生徒記念イベント
+        </h2>
       </div>
 
       <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-xs text-slate-800">
         <strong class="text-amber-900 font-bold block text-sm">🏀 本校卒業生 宮崎早織さん 凱旋セレモニー</strong>
         <p class="text-slate-700 leading-relaxed">
-          女子バスケットボール元日本代表・オリンピック銀メダリストの宮崎早織選手をお迎えし、全校生徒で創立80周年をお祝いする特別な記念イベントを実施します！（詳細プログラムは後日公開）
+          女子バスケットボール元日本代表・東京オリンピック銀メダリストの宮崎早織さんをお迎えし、全校生徒で創立80周年をお祝いする特別な記念イベントを実施します！（詳細プログラムは後日公開）
         </p>
       </div>
 
@@ -956,7 +968,7 @@
       </p>
     </section>
 
-    <!-- 9. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
+    <!-- 10. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
     <section class="card-night-clean rounded-2xl p-5 shadow-xl relative overflow-hidden border border-purple-500/30">
       <div class="flex items-center justify-between mb-2">
         <div class="flex items-center gap-2">
@@ -985,9 +997,13 @@
         さいたま市立与野東中学校は、生徒・保護者・地域の皆様・歴代卒業生の温かい支えを受け、創立80周年という大きな節目を迎えました。<br>
         本文化祭特設サイトは、開催に向けて<strong>【10月中旬頃】</strong>に詳細タイムテーブル、出店キッチンカー情報、地域体験ブースの全貌などを順次公開・アップデートしてまいります！
       </p>
-      <div class="pt-2">
-        <span class="inline-block bg-white/10 text-sky-200 text-[11px] font-bold px-3.5 py-1.5 rounded-full border border-white/10">
-          📱 ぜひ本ページをブックマークして、最新情報をお待ちください！
+      <div class="pt-3 flex flex-col items-center gap-2">
+        <!-- ✨ ブックマーク誘導ボタン -->
+        <button id="bookmark-btn" onclick="handleBookmark()" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer text-xs sm:text-sm border-2 border-amber-200">
+          <span>✨</span> このページをブックマークする <span>⭐</span>
+        </button>
+        <span class="text-[11px] text-sky-200 font-medium">
+          📱 10月中旬の詳細公開をお楽しみに！
         </span>
       </div>
     </section>
@@ -1040,6 +1056,75 @@
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+    // 3. ブックマーク誘導ハンドラー
+    function handleBookmark() {
+      const userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+        alert("【iPhone / iPadをご利用の方】\n\n画面下部（または上部）にある「共有ボタン（四角から矢印が出ているアイコン ⎋ / ⎙）」をタップし、「ホーム画面に追加」または「ブックマークを追加」を選択してください。");
+        return;
+      }
+      if (userAgent.includes("android")) {
+        alert("【Androidをご利用の方】\n\nブラウザ（Chrome等）右上にある「3つのドット（メニューアイコン ⋮）」をタップし、「★（星マーク）」をタップするか「ホーム画面に追加」を選択してください。");
+        return;
+      }
+      const isMac = userAgent.includes("mac");
+      const shortcutKey = isMac ? "【Command (⌘)】+【D】" : "【Ctrl】+【D】";
+      alert("【PCをご利用の方】\n\nキーボードの " + shortcutKey + " キーを押すと、このページをブックマーク（お気に入り）に登録できます！");
+    }
+    // 4. 東風マスコット タップ演出（Easter Egg）
+    const higashikazeQuotes = [
+      '東風に乗ろう！🍃',
+      'びゅ〜〜ん！💨 80周年楽しもう！',
+      '11月7日(土)、与野東中で待ってるよ！🏫✨',
+      '希望のバトンをつなごう！🌟',
+      '美味しいキッチンカーも来るって！🚚',
+      '冬の校庭で花火も？！🎆',
+      '東風パパも下にいるから探してみてね！👨‍👦'
+    ];
+    let quoteIndex = 0;
+
+    function talkHigashikaze() {
+      quoteIndex = (quoteIndex + 1) % higashikazeQuotes.length;
+      const bubble = document.getElementById('mascot-speech-bubble');
+      const img = document.getElementById('mascot-higashikaze-img');
+      if (bubble) {
+        bubble.innerText = higashikazeQuotes[quoteIndex];
+        bubble.classList.remove('animate-bounce');
+        void bubble.offsetWidth; // reflow
+        bubble.classList.add('animate-bounce');
+      }
+      if (img) {
+        img.classList.add('scale-125');
+        setTimeout(() => img.classList.remove('scale-125'), 200);
+      }
+    }
+
+    // 5. 東風パパ タップ演出（Easter Egg）
+    const fujinQuotes = [
+      '好きを咲かせよう！🌸',
+      'わしが東風の父（東風パパ）じゃ！よろしくのう！☁️',
+      'みんなの発表が今から楽しみじゃ！🎸',
+      '美味しいものいっぱい食べるぞい！🚚',
+      'わしが温かい風を起こして応援するぞ！💨✨'
+    ];
+    let fujinIndex = 0;
+
+    function talkFujin() {
+      fujinIndex = (fujinIndex + 1) % fujinQuotes.length;
+      const bubble = document.getElementById('mascot-fujin-bubble');
+      const img = document.getElementById('mascot-fujin-img');
+      if (bubble) {
+        bubble.innerText = fujinQuotes[fujinIndex];
+        bubble.classList.remove('animate-bounce');
+        void bubble.offsetWidth;
+        bubble.classList.add('animate-bounce');
+      }
+      if (img) {
+        img.classList.add('scale-125');
+        setTimeout(() => img.classList.remove('scale-125'), 200);
+      }
+    }
+
 
     // 2. お問い合わせフォームのページ内開閉トグル
     const toggleFormBtn = document.getElementById('toggle-form-btn');
