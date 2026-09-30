@@ -589,8 +589,8 @@
 
     <!-- 2. 【メインヘッダー：爽やかな東風の青空】 -->
     <header class="text-center pt-2 pb-0 flex flex-col items-center gap-2.5 relative">
-      <!-- 80周年記念バッジ（スマホでも確実に1行表示） -->
-      <div class="inline-flex items-center gap-1.5 bg-white text-sky-800 border border-sky-200 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-black tracking-wider uppercase shadow-sm wave-badge whitespace-nowrap">
+      <!-- 80周年記念バッジ（スマホでも確実に1行表示・下線なしクリーン表示） -->
+      <div class="inline-flex items-center gap-1.5 bg-white text-sky-800 border border-sky-200 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-black tracking-wider uppercase wave-badge whitespace-nowrap no-underline" style="text-decoration: none; border-style: solid;">
         <span class="inline-flower-float text-xs">🌸</span>
         <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         <span>さいたま市立与野東中学校 創立80周年</span>
@@ -626,9 +626,9 @@
         </h2>
         <span class="text-[10px] font-bold text-amber-600">✨ News</span>
       </div>
-      <div class="space-y-2 text-xs">
+      <div class="space-y-2 text-[13px] sm:text-sm">
         <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
-          <span class="text-slate-500 font-bold shrink-0 text-[11px]">2026.09.24</span>
+          <span class="text-slate-500 font-bold shrink-0 text-xs">2026.09.24</span>
           <div class="space-y-0.5">
             <span class="badge-pill bg-emerald-600 text-white text-[9px] py-0.5 px-1.5 font-bold">公開</span>
             <p class="text-slate-800 font-medium leading-relaxed">
@@ -637,7 +637,7 @@
           </div>
         </div>
       </div>
-      <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2.5 leading-relaxed bg-amber-50/70 p-2 rounded-lg border border-amber-200/60">
+      <p class="text-[11px] sm:text-xs text-slate-500 mt-2.5 leading-relaxed bg-amber-50/70 p-2 rounded-lg border border-amber-200/60">
         ※追加プログラムや最新情報は、本コーナーにて順次公開、アップデートしてまいります。
       </p>
     </section>
@@ -679,7 +679,7 @@
       </div>
 
       <!-- ① 日程 -->
-      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[13px] sm:text-sm">
         <div class="flex items-center gap-2 mb-1.5">
           <span class="badge-pill bg-teal-600 text-white text-[10px]">日程</span>
           <strong class="text-slate-900 text-sm font-bold">2026年11月7日(土) 開催</strong>
@@ -692,7 +692,7 @@
       </div>
 
       <!-- ② 会場・アクセス -->
-      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[13px] sm:text-sm">
         <div class="flex items-center gap-2 mb-1.5">
           <span class="badge-pill bg-slate-700 text-white text-[10px]">会場</span>
           <strong class="text-slate-900 text-sm font-bold">さいたま市立与野東中学校</strong>
@@ -703,7 +703,7 @@
       </div>
 
       <!-- ③ お問い合わせ（学校問い合わせ不可・実行委員会専用フォーム窓口） -->
-      <div class="bg-sky-50/70 p-3.5 sm:p-4 rounded-xl border border-sky-200 text-xs space-y-2.5">
+      <div class="bg-sky-50/70 p-3.5 sm:p-4 rounded-xl border border-sky-200 text-[13px] sm:text-sm space-y-2.5">
         <div class="flex items-center gap-1.5 text-sky-900 font-bold">
           <svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
           <span class="text-sm font-black">お問い合わせ窓口</span>
@@ -735,7 +735,7 @@
           </div>
         </div>
 
-        <p class="text-[10px] text-slate-500 leading-relaxed">
+        <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
           ※ご送信いただいた内容は実行委員会にて確認のうえ、ご入力いただいたメールアドレス宛に折り返しご返信いたします。
         </p>
       </div>
@@ -750,7 +750,7 @@
         <span class="badge-pill bg-amber-500 text-white uppercase tracking-wider text-[10px] sm:text-xs">Special Guest</span>
       </div>
 
-      <p class="text-xs text-slate-700 leading-relaxed mb-3">
+      <p class="text-[13px] sm:text-sm text-slate-700 leading-relaxed mb-3">
         女子バスケットボール元日本代表・東京オリンピック銀メダリストの宮崎早織さんが、創立80周年のお祝いに母校へ駆けつけてくださいます！
       </p>
 
@@ -763,7 +763,7 @@
               <span class="badge-pill bg-slate-200 text-slate-800">地域ミニバス選手対象</span>
             </div>
             <h3 class="text-xs font-black text-slate-900">小学生バスケクリニック</h3>
-            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+            <p class="text-xs sm:text-[12.5px] text-slate-600 mt-1 leading-relaxed">
               地域ミニバス選手を対象とした特別講習会（協賛：青少年育成さいたま市民会議 与野東地区会／参加費無料）。<br>
               <span class="text-slate-500 font-medium">※対象となる地域のミニバス団体様へ直接ご案内をお送りいたします。</span>
             </p>
@@ -779,7 +779,7 @@
             </div>
             <h3 class="text-xs font-black text-slate-900">宮崎早織さん凱旋セレモニー</h3>
           </div>
-          <p class="text-[10px] text-slate-400 mt-2">
+          <p class="text-[11px] text-slate-400 mt-2">
             ※当日の模様は後日、本サイトにて写真レポートを公開予定です。
           </p>
         </div>
@@ -852,7 +852,7 @@
             <span class="badge-pill bg-indigo-100 text-indigo-800">地域・外部連携</span>
           </div>
           <h3 class="text-xs font-bold text-slate-900">🤝 地域・外部団体 特別体験コンテンツ</h3>
-          <p class="text-[11px] text-slate-600 mt-0.5">
+          <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
             地域連携コーディネーター連携による特別体験ブース！詳細コンテンツは10月中旬に公開予定です。
           </p>
         </div>
@@ -879,7 +879,7 @@
             <span class="badge-pill bg-orange-100 text-orange-800">テイクアウト軽食</span>
           </div>
           <h3 class="text-xs font-bold text-slate-900">🚚 絶品キッチンカー＆飲食エリア</h3>
-          <p class="text-[11px] text-slate-600 mt-0.5 leading-relaxed">
+          <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
             人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
           </p>
         </div>
@@ -901,14 +901,14 @@
         </h2>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-xs text-slate-800 relative z-10">
+      <div class="bg-white/95 p-4 rounded-xl border border-orange-200 space-y-2 text-[13px] sm:text-sm text-slate-800 relative z-10">
         <strong class="text-amber-900 font-bold block text-sm">🏀 本校卒業生 宮崎早織さん 凱旋セレモニー</strong>
         <p class="text-slate-700 leading-relaxed">
           女子バスケットボール元日本代表・東京オリンピック銀メダリストの宮崎早織さんをお迎えし、全校生徒で創立80周年をお祝いする特別な記念イベントを実施します！（詳細プログラムは後日公開）
         </p>
       </div>
 
-      <p class="text-[11px] text-amber-950 bg-amber-100/80 p-2.5 rounded-xl font-medium leading-relaxed relative z-10">
+      <p class="text-xs sm:text-[12.5px] text-amber-950 bg-amber-100/80 p-2.5 rounded-xl font-medium leading-relaxed relative z-10">
         ※第2部は安全管理・体育館収容人数の都合上【在校生限定】となります（一般の方の入場・観覧はできません。ごめんなさい…！🙇‍♀️）。当日の熱気あふれる様子は後日、本サイトにて写真レポートを公開予定です！
       </p>
     </section>
@@ -967,7 +967,7 @@
       <h2 class="text-lg font-black text-white font-rounded mb-1 flex items-center gap-2 text-shadow-firework relative z-10">
         🎆 創立80周年記念 花火（約15分間）
       </h2>
-      <p class="text-xs text-slate-300 leading-relaxed relative z-10">
+      <p class="text-[13px] sm:text-sm text-slate-300 leading-relaxed relative z-10">
         第2部記念イベントのグランドフィナーレを飾る、在校生のための記念花火！（※雨天中止 / 任意参加 / 第2部の延長プログラムとして実施するため、一般公開はございません）
       </p>
     </section>
@@ -990,14 +990,14 @@
         <span class="text-[10px] text-sky-200 block mt-0.5 font-medium">〜東風と歩んだ80年 これまでも、これからも〜</span>
       </div>
 
-      <div class="text-xs text-slate-300 leading-relaxed max-w-lg mx-auto space-y-2">
+      <div class="text-[13px] sm:text-sm text-slate-300 leading-relaxed max-w-lg mx-auto space-y-2">
         <p>
           さいたま市立与野東中学校は、生徒・保護者・地域の皆様・歴代卒業生の温かい支えを受け、創立80周年の節目を迎えました。
         </p>
         <p class="text-sky-200 font-medium">
           本文化祭は、そんな記念の1ページを皆さまと共にお祝いしたいという思いで企画されました。在校生だけでなく、小学生や卒業生、地域の皆様のご来校を心よりお待ちしております。
         </p>
-        <p class="text-[11px] text-slate-400 pt-1.5 border-t border-slate-700/60">
+        <p class="text-xs sm:text-[12.5px] text-slate-400 pt-1.5 border-t border-slate-700/60">
           タイムテーブル、キッチンカー、体験ブースなど詳細は<strong>【10月中旬頃】</strong>に順次公開・アップデート予定です！
         </p>
       </div>
@@ -1014,7 +1014,7 @@
     </section>
 
     <!-- 11. 【フッター・クレジット】（夜空に映える高コントラスト・高視認性デザイン） -->
-    <footer class="text-center text-xs text-slate-300 py-8 flex flex-col gap-3.5 border-t border-slate-800/80 mt-2">
+    <footer class="text-center text-[12px] sm:text-xs text-slate-300 py-8 flex flex-col gap-3.5 border-t border-slate-800/80 mt-2">
       <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-4 border border-slate-700/60 shadow-lg space-y-2">
         <div>
           <strong class="text-sky-300 font-black tracking-wide block mb-0.5">主催・共催</strong>
