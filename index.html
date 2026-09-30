@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
   <title>さいたま市立与野東中学校 創立80周年記念文化祭 | 公式特設サイト</title>
   
   <!-- 📊 アクセス解析（Google Analytics 4 / 測定IDを設定してご利用いただけます） -->
@@ -38,12 +39,27 @@
   </script>
 
   <style>
+    /* 🚫 スマホ（iOS Safari等）の自動住所・地名リンクおよび点線下線を完全無効化 */
+    a[x-apple-data-detectors],
+    [x-apple-data-detectors],
+    span[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      border-bottom: none !important;
+      background: none !important;
+    }
+
     body {
       font-family: 'Noto Sans JP', sans-serif;
       /* より明るく澄み渡る東風のスカイブルー〜サンセット〜夜空花火グラデーション */
       background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 14%, #f8fafc 28%, #fffbeb 46%, #ffedd5 68%, #1e1b4b 86%, #0f172a 100%);
       min-height: 100vh;
       color: #0f172a;
+      -webkit-text-size-adjust: 100%;
     }
     
     /* B案の明るくクリーンで洗練されたカード要素を取り入れたハイブリッドカード */
@@ -695,9 +711,9 @@
       <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[13px] sm:text-sm">
         <div class="flex items-center gap-2 mb-1.5">
           <span class="badge-pill bg-slate-700 text-white text-[10px]">会場</span>
-          <strong class="text-slate-900 text-sm font-bold">さいたま市立与野東中学校</strong>
+          <strong class="text-slate-900 text-sm font-bold no-underline" style="text-decoration: none; border-bottom: none;">さいたま市立与野東中学校</strong>
         </div>
-        <p class="text-slate-700 leading-relaxed pl-1">
+        <p class="text-slate-700 leading-relaxed pl-1 no-underline" style="text-decoration: none; border-bottom: none;">
           校庭・体育館・校舎内・視聴覚室 等
         </p>
       </div>
@@ -762,7 +778,7 @@
               <span class="badge-pill bg-sky-600 text-white">第1部 13:00〜</span>
               <span class="badge-pill bg-slate-200 text-slate-800">地域ミニバス選手対象</span>
             </div>
-            <h3 class="text-xs font-black text-slate-900">小学生バスケクリニック</h3>
+            <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">小学生バスケクリニック</h3>
             <p class="text-xs sm:text-[12.5px] text-slate-600 mt-1 leading-relaxed">
               地域ミニバス選手を対象とした特別講習会（協賛：青少年育成さいたま市民会議 与野東地区会／参加費無料）。<br>
               <span class="text-slate-500 font-medium">※対象となる地域のミニバス団体様へ直接ご案内をお送りいたします。</span>
@@ -777,7 +793,7 @@
               <span class="badge-pill bg-amber-600 text-white">第2部 15:30〜</span>
               <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300">在校生限定</span>
             </div>
-            <h3 class="text-xs font-black text-slate-900">宮崎早織さん凱旋セレモニー</h3>
+            <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">宮崎早織さん凱旋セレモニー</h3>
           </div>
           <p class="text-[11px] text-slate-400 mt-2">
             ※当日の模様は後日、本サイトにて写真レポートを公開予定です。
@@ -831,7 +847,7 @@
             <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
             <span class="badge-pill bg-sky-100 text-sky-800">生演奏</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900">🎺 吹奏楽部 記念コンサート</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🎺 吹奏楽部 記念コンサート</h3>
           <p class="text-[11px] text-slate-500 mt-0.5">（タイムテーブルは後日発表）</p>
         </div>
 
@@ -841,7 +857,7 @@
             <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
             <span class="badge-pill bg-slate-200 text-slate-600">Coming Soon</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900">🎸 東風スペシャルバンド</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🎸 東風スペシャルバンド</h3>
           <p class="text-[11px] text-slate-500 mt-0.5">続報乞うご期待！</p>
         </div>
 
@@ -851,7 +867,7 @@
             <span class="text-[10px] font-bold text-indigo-600">校舎内（予定）</span>
             <span class="badge-pill bg-indigo-100 text-indigo-800">地域・外部連携</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900">🤝 地域・外部団体 特別体験コンテンツ</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🤝 地域・外部団体 特別体験コンテンツ</h3>
           <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
             地域連携コーディネーター連携による特別体験ブース！詳細コンテンツは10月中旬に公開予定です。
           </p>
@@ -863,7 +879,7 @@
             <span class="text-[10px] font-bold text-emerald-600">校舎内・体育館</span>
             <span class="badge-pill bg-emerald-100 text-emerald-800">展示・体験</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900 mb-1">部活動・学年体験ブース（参加無料）</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900 mb-1">部活動・学年体験ブース（参加無料）</h3>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-slate-700 mt-1.5">
             <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🍵 茶道部</div>
             <div class="bg-white p-2.5 rounded-lg border border-slate-200 text-center font-bold shadow-xs">🧪 理科部</div>
@@ -878,7 +894,7 @@
             <span class="text-[10px] font-bold text-orange-600">昇降口前ロータリー</span>
             <span class="badge-pill bg-orange-100 text-orange-800">テイクアウト軽食</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900">🚚 絶品キッチンカー＆飲食エリア</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🚚 絶品キッチンカー＆飲食エリア</h3>
           <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
             人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
           </p>
