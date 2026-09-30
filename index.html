@@ -587,18 +587,18 @@
 
   <div class="max-w-xl mx-auto px-4 pt-4 flex flex-col gap-6 relative z-10">
 
-    <!-- 2. 【メインヘッダー：爽やかな東風の青空 ＆ 公式スローガン】 -->
-    <header class="text-center pt-3 pb-1 flex flex-col items-center gap-3 relative">
-      <!-- 80周年記念バッジ（可愛いお花付き） -->
-      <div class="inline-flex items-center gap-2 bg-white text-sky-800 border border-sky-200 px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase shadow-sm wave-badge">
-        <span class="inline-flower-float text-sm">🌸</span>
-        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <!-- 2. 【メインヘッダー：爽やかな東風の青空】 -->
+    <header class="text-center pt-2 pb-0 flex flex-col items-center gap-2.5 relative">
+      <!-- 80周年記念バッジ（スマホでも確実に1行表示） -->
+      <div class="inline-flex items-center gap-1.5 bg-white text-sky-800 border border-sky-200 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-black tracking-wider uppercase shadow-sm wave-badge whitespace-nowrap">
+        <span class="inline-flower-float text-xs">🌸</span>
+        <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         <span>さいたま市立与野東中学校 創立80周年</span>
-        <span class="inline-flower-spin text-sm">🌼</span>
+        <span class="inline-flower-spin text-xs">🌼</span>
       </div>
 
       <!-- メインタイトル＆キャッチコピー -->
-      <div class="space-y-1">
+      <div class="space-y-0.5">
         <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug font-rounded">
           創立80周年記念文化祭
         </h1>
@@ -606,46 +606,25 @@
           〜 未来を迎えに行こう。私の「好き」がひらく一日 〜
         </p>
       </div>
-
-      <!-- 在校生投票で決定！80周年公式スローガンフレーム（マスコットがひょっこり！） -->
-      <div class="w-full bg-white rounded-2xl p-4 sm:p-5 pt-6 sm:pt-6 border border-sky-200 shadow-sm flex flex-col items-center gap-1.5 relative mt-8 sm:mt-9">
-        
-        <!-- 🌸 スローガン枠の左上・右下を彩る可愛いお花デコレーション -->
-        <div class="absolute -top-3 -left-2 text-xl inline-flower-float pointer-events-none select-none">🌸</div>
-        <div class="absolute -bottom-3 -left-1 text-base inline-flower-spin pointer-events-none select-none">🌼</div>
-
-        <!-- 🍃 ひょっこり東風マスコット（タップ・クリックでメッセージが変わるインタラクティブ演出！） -->
-        <div id="mascot-higashikaze-btn" onclick="talkHigashikaze()" class="absolute -top-11 sm:-top-12 -right-1 sm:right-1 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風くんをタップしてね！">
-          <div id="mascot-speech-bubble" class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-3 py-1 rounded-full border-2 border-amber-300 shadow-md mb-1 sm:mb-0 sm:-mr-2 z-10 animate-bounce transition-all whitespace-nowrap text-center max-w-[200px] sm:max-w-none">
-            東風に乗ろう！
-          </div>
-          <img id="mascot-higashikaze-img" src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain filter drop-shadow-lg mascot-bounce group-hover:rotate-6 transition-transform">
-        </div>
-
-        <span class="badge-pill bg-sky-100 text-sky-800 border border-sky-200 uppercase text-[10px]">
-          創立80周年記念 スローガン
-        </span>
-        <div class="mt-1 text-center">
-          <p class="text-sm sm:text-base font-black text-slate-900 leading-snug font-rounded">
-            「<ruby>希望<rt class="text-[10px] text-sky-600 font-bold">ゆめ</rt></ruby>のバトンをつなげ、実現の未来へ！」
-          </p>
-          <p class="text-xs sm:text-sm font-bold text-sky-800 mt-0.5 font-rounded">
-            〜 東風と歩んだ80年 これまでも、これからも 〜
-          </p>
-        </div>
-      </div>
     </header>
 
-    <!-- 3. 【📢 お知らせ・新着情報（News & Updates）】 -->
-    <section class="card-clean-white rounded-2xl p-4 sm:p-5 shadow-sm border-t-4 border-amber-400">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3">
-        <h2 class="text-sm sm:text-base font-black text-slate-900 flex items-center gap-2 font-rounded">
-          <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
-          お知らせ・新着情報
+    <!-- 3. 【新着情報】（東風くんがひょっこり！） -->
+    <section class="card-clean-white rounded-2xl p-4 sm:p-5 shadow-sm border-t-4 border-amber-400 relative mt-7 sm:mt-8">
+      
+      <!-- 🍃 ひょっこり東風マスコット（新着情報カード右上に配置・タップ演出） -->
+      <div id="mascot-higashikaze-btn" onclick="talkHigashikaze()" class="absolute -top-11 -right-1 sm:right-2 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風くんをタップしてね！">
+        <div id="mascot-speech-bubble" class="bg-amber-50 text-amber-950 text-[11px] sm:text-xs font-black px-2.5 py-0.5 rounded-full border-2 border-amber-300 shadow-md mb-1 sm:mb-0 sm:-mr-2 z-10 animate-bounce transition-all whitespace-nowrap text-center">
+          東風に乗ろう！
+        </div>
+        <img id="mascot-higashikaze-img" src="./images/mascot_higashikaze.png" alt="東風マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain filter drop-shadow-lg mascot-bounce group-hover:rotate-6 transition-transform">
+      </div>
+
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2.5">
+        <h2 class="text-sm sm:text-base font-black text-slate-900 flex items-center gap-1.5 font-rounded">
+          <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+          新着情報
         </h2>
-        <span class="badge-pill badge-shimmer text-amber-950 font-black text-[10px] tracking-wider uppercase px-2.5 py-1">
-          <span class="sparkle-icon">✨</span> News <span class="sparkle-icon">✨</span>
-        </span>
+        <span class="text-[10px] font-bold text-amber-600">✨ News</span>
       </div>
       <div class="space-y-2 text-xs">
         <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
@@ -719,10 +698,7 @@
           <strong class="text-slate-900 text-sm font-bold">さいたま市立与野東中学校</strong>
         </div>
         <p class="text-slate-700 leading-relaxed pl-1">
-          校庭・体育館・校舎内・視聴覚室 等<br>
-          <span class="text-amber-900 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200 inline-block mt-1">
-            ⚠️ 敷地内の駐輪スペースは場所が限られておりますので、なるべく徒歩または公共交通機関でお越しください。（※お車・バイクでのご来校は固くお断りいたします）
-          </span>
+          校庭・体育館・校舎内・視聴覚室 等
         </p>
       </div>
 
@@ -731,7 +707,7 @@
         <div class="flex items-center gap-2 border-b border-rose-100 pb-2">
           <svg class="w-5 h-5 text-rose-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
           <h3 class="text-sm font-black text-rose-950">
-            安全管理ルール ＆ ご来場の皆様へのお願い
+            ご来場の皆様へのお願い
           </h3>
         </div>
 
@@ -745,7 +721,7 @@
               生徒の肖像権およびプライバシー安全管理のため、個人が特定できるかどうかにかかわらず、SNSや動画サイト、ブログ等への投稿は固くお断りいたします。
             </p>
             <p class="text-slate-800 text-[11px] leading-relaxed pt-1 border-t border-rose-200/60">
-              📸 校内での撮影は「保護者・ご家族および関係者」に限定いたします。一般来場者の方による生徒の撮影はご遠慮ください。ご家族による記念撮影はご家庭内でお楽しみください。
+              📸 校内での撮影は「保護者・ご家族および関係者」に限定いたします。一般来場者の方による撮影はご遠慮ください。ご家族による記念撮影はご家庭内でお楽しみください。
             </p>
           </div>
 
@@ -800,62 +776,7 @@
       </div>
     </section>
 
-    <!-- 6. 【タイムライン ＆ プログラム概要】（スッキリ明るいピルバッジ構成） -->
-    <section class="card-clean-white rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 border-t-4 border-sky-500">
-      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
-        <h2 class="text-base font-black text-slate-900 flex items-center gap-2 font-rounded">
-          <span class="w-3 h-3 rounded bg-sky-600"></span>
-          タイムライン ＆ プログラム概要
-        </h2>
-        <span class="text-xs font-bold text-slate-500">当日の進行予定</span>
-      </div>
-      
-      <div class="space-y-3 text-xs text-slate-700">
-        <div class="grid grid-cols-1 gap-2.5">
-          <!-- 第1部 -->
-          <div class="border-2 border-sky-400/40 bg-sky-50/70 rounded-xl p-3.5 flex flex-col gap-1.5">
-            <div class="flex flex-wrap items-center justify-between gap-1.5">
-              <span class="badge-pill bg-sky-600 text-white">第1部</span>
-              <span class="badge-pill bg-emerald-600 text-white font-black shadow-sm text-[11px] px-2.5 py-0.5">どなたでも来場可（一般公開）</span>
-            </div>
-            <h3 class="text-sm font-black text-slate-900 mt-0.5 leading-snug">10:00 〜 15:00 一般公開・部活動・有志団体・地域交流</h3>
-            <p class="text-slate-700 leading-relaxed mt-0.5">
-              吹奏楽部生演奏、生徒有志の発表・展示、体験ワークショップ、絶品キッチンカーなど
-            </p>
-            <p class="text-[11px] text-sky-950 font-medium bg-white/90 border border-sky-200/80 p-2 rounded-lg mt-1.5 leading-relaxed">
-              🌟 大人も子どもも、地域の皆様も大歓迎！小学生の皆さんには「中学校ってどんなところ？」を体感していただける機会です。懐かしい母校の姿を見に、卒業生の皆様のご来校も心よりお待ちしております！
-            </p>
-          </div>
-
-          <!-- 第2部 -->
-          <div class="border border-amber-300 bg-amber-50/70 rounded-xl p-3.5 flex flex-col gap-1.5">
-            <div class="flex flex-wrap items-center justify-between gap-1.5">
-              <span class="badge-pill bg-amber-600 text-white">第2部</span>
-              <span class="badge-pill bg-rose-100 text-rose-800 border border-rose-300 font-bold text-[11px] px-2 py-0.5">【在校生限定】一般公開なし</span>
-            </div>
-            <h3 class="text-sm font-black text-slate-900 mt-0.5 leading-snug">15:30 〜 17:15 全校生徒記念イベント</h3>
-            <p class="text-slate-700 leading-relaxed mt-0.5">
-              本校卒業生宮崎早織さん凱旋セレモニー（詳細は後日公開）<br>
-              <span class="text-[11px] text-amber-900 font-bold">※体育館収容人数・安全確保のため、一般の方の入場・観覧はできません。（ごめんなさい…！🙇‍♀️）</span>
-            </p>
-          </div>
-
-          <!-- フィナーレ -->
-          <div class="border border-indigo-200 bg-indigo-50/60 rounded-xl p-3.5 flex flex-col gap-1">
-            <div class="flex items-center justify-between">
-              <span class="badge-pill bg-indigo-600 text-white">フィナーレ</span>
-              <span class="badge-pill bg-purple-100 text-purple-800 border border-purple-300">【在校生限定・任意参加】</span>
-            </div>
-            <h3 class="text-sm font-black text-slate-900 mt-1">17:30頃 〜 創立80周年記念花火</h3>
-            <p class="text-slate-700 leading-relaxed mt-0.5">
-              第2部の締めくくりとして、在校生で楽しむ記念花火（約15分間）！（※雨天中止 / 任意参加 / 一般公開なし）
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. 【スペシャルゲスト：宮崎早織さん】（明るく華やかなゴールドカード） -->
+    <!-- 6. 【スペシャルゲスト：宮崎早織さん】（明るく華やかなゴールドカード） -->
     <section class="card-clean-white rounded-2xl p-5 shadow-sm border-2 border-amber-300 relative overflow-hidden">
       <div class="flex items-center justify-between mb-2.5 border-b border-amber-100 pb-2">
         <span class="badge-pill bg-amber-500 text-white uppercase tracking-wider">Special Guest</span>
@@ -875,15 +796,12 @@
           <div>
             <div class="flex items-center gap-1.5 mb-1">
               <span class="badge-pill bg-sky-600 text-white">第1部 13:00〜</span>
-              <span class="badge-pill bg-slate-200 text-slate-800">事前申込・抽選制</span>
+              <span class="badge-pill bg-slate-200 text-slate-800">地域ミニバスAチーム選手対象</span>
             </div>
             <h3 class="text-xs font-black text-slate-900">小学生バスケクリニック</h3>
             <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
               地域ミニバスAチーム選手を対象とした特別講習会（協賛：青少年育成さいたま市民会議 与野東地区会／参加費無料）。
             </p>
-          </div>
-          <div class="bg-white border border-amber-300 text-amber-900 text-[11px] font-bold text-center py-1.5 rounded-lg mt-2">
-            【近日公開】参加申込フォーム準備中
           </div>
         </div>
 
@@ -937,7 +855,6 @@
         <div>
           <span class="bg-white/20 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Student Project</span>
           <h3 class="text-sm font-black mt-0.5">たくさんの生徒有志がエントリー！熱気あふれる発表＆展示</h3>
-          <p class="text-[11px] text-sky-100 mt-0.5">ダンス、バンド、作品展示、特技披露など、生徒たちの「好き」が集結！</p>
         </div>
         <span class="bg-white text-slate-900 text-xs font-black px-3 py-1.5 rounded-lg shrink-0 shadow-sm">
           詳細 順次公開
@@ -999,15 +916,15 @@
             <span class="text-[10px] font-bold text-orange-600">昇降口前ロータリー</span>
             <span class="badge-pill bg-orange-100 text-orange-800">テイクアウト軽食</span>
           </div>
-          <h3 class="text-xs font-bold text-slate-900">🚚 絶品キッチンカー＆軽食エリア（10:00〜15:00）</h3>
+          <h3 class="text-xs font-bold text-slate-900">🚚 絶品キッチンカー＆飲食エリア</h3>
           <p class="text-[11px] text-slate-600 mt-0.5 leading-relaxed">
-            人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食指定スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
+            人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 9. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
+    <!-- 8. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
     <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 relative overflow-hidden">
       <!-- 🌸 夕暮れのお花デコレーション（スマホでもしっかり見える） -->
       <div class="absolute -top-1 -right-1 text-2xl inline-flower-spin opacity-80 pointer-events-none select-none">🌺</div>
@@ -1034,7 +951,7 @@
       </p>
     </section>
 
-    <!-- 10. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
+    <!-- 9. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
     <section class="card-night-clean rounded-2xl p-5 shadow-xl relative overflow-hidden border border-purple-500/30">
       
       <!-- 🎆 カード内蔵型：スマホでも確実に咲き誇るキラキラ大輪花火アニメーション（右肩＆左下） -->
@@ -1081,7 +998,6 @@
 
       <div class="flex items-center justify-between mb-2 relative z-10">
         <div class="flex items-center gap-2">
-          <span class="badge-pill bg-gradient-to-r from-pink-500 to-purple-500 text-white">17:30頃 〜 校庭</span>
           <span class="badge-pill bg-purple-500/90 text-white font-bold">【在校生限定・任意参加】</span>
         </div>
         <span class="text-xs text-slate-400">※雨天中止</span>
@@ -1102,6 +1018,16 @@
       <h3 class="text-base sm:text-lg font-black text-white font-rounded leading-snug">
         歴史をつなぎ、未来へひらく特別な一日を。
       </h3>
+      
+      <!-- 創立80周年記念スローガン -->
+      <div class="bg-white/10 border border-white/20 rounded-xl p-3 max-w-lg mx-auto text-center backdrop-blur-xs">
+        <span class="text-[10px] font-bold text-amber-300 block mb-0.5">創立80周年記念スローガン</span>
+        <p class="text-xs sm:text-sm font-black text-white font-rounded tracking-wide">
+          「希望<span class="text-[10px] font-normal">（ゆめ）</span>のバトンをつなげ、実現の未来へ！」
+        </p>
+        <span class="text-[10px] text-sky-200 block mt-0.5 font-medium">〜東風と歩んだ80年 これまでも、これからも〜</span>
+      </div>
+
       <p class="text-xs text-slate-300 leading-relaxed max-w-lg mx-auto">
         さいたま市立与野東中学校は、生徒・保護者・地域の皆様・歴代卒業生の温かい支えを受け、創立80周年という大きな節目を迎えました。<br>
         本文化祭特設サイトは、開催に向けて<strong>【10月中旬頃】</strong>に詳細タイムテーブル、出店キッチンカー情報、地域体験ブースの全貌などを順次公開・アップデートしてまいります！
