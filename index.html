@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no, address=no, email=no">
-  <title>さいたま市立与野東中学校 創立80周年記念文化祭 | 公式特設サイト</title>
+  <title>さいたま市立与野東中学校 創立80周年記念文化祭「東風祭（KOCHISAI）」| 公式特設サイト</title>
   
   <!-- 📊 アクセス解析（Google Analytics 4 / 測定IDを設定してご利用いただけます） -->
   <!--
@@ -625,7 +625,7 @@
       <!-- メインタイトル＆キャッチコピー -->
       <div class="space-y-0.5">
         <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug font-rounded">
-          創立80周年記念文化祭
+          創立80周年記念文化祭「東風祭」
         </h1>
         <p class="text-xs sm:text-sm text-sky-950 font-bold tracking-wide">
           〜 未来を迎えに行こう。私の「好き」がひらく一日 〜
@@ -652,6 +652,16 @@
         <span class="text-[10px] font-bold text-amber-600">✨ News</span>
       </div>
       <div class="space-y-2 text-[13px] sm:text-sm">
+        <div class="flex items-start gap-2 bg-amber-50/80 p-2.5 rounded-xl border border-amber-300 shadow-xs">
+          <span class="text-amber-700 font-bold shrink-0 text-xs">2026.10.29</span>
+          <div class="space-y-0.5">
+            <span class="badge-pill bg-rose-600 text-white text-[9px] py-0.5 px-1.5 font-black animate-pulse">NEW</span>
+            <span class="badge-pill bg-sky-600 text-white text-[9px] py-0.5 px-1.5 font-bold">チラシ完成</span>
+            <p class="text-slate-900 font-bold leading-relaxed">
+              創立80周年記念文化祭 公式チラシが完成！タイムテーブル＆見どころを大公開✨
+            </p>
+          </div>
+        </div>
         <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
           <span class="text-slate-500 font-bold shrink-0 text-xs">2026.10.01</span>
           <div class="space-y-0.5">
@@ -665,6 +675,71 @@
       <p class="text-[11px] sm:text-xs text-slate-500 mt-2.5 leading-relaxed bg-amber-50/70 p-2 rounded-lg border border-amber-200/60">
         ※追加プログラムや最新情報は、本コーナーにて順次公開、アップデートしてまいります。
       </p>
+    </section>
+
+    <!-- 3.5 【公式チラシ完成・両面大公開カード（省スペース・タブ切り替え型）】 -->
+    <section class="card-clean-white rounded-2xl p-4 sm:p-5 shadow-sm border-t-4 border-rose-500 relative mt-6 sm:mt-7">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2.5">
+        <h2 class="text-sm sm:text-base font-black text-slate-900 flex items-center gap-1.5 font-rounded">
+          <span class="w-2.5 h-2.5 rounded bg-rose-600"></span>
+          ＼ 公式チラシ完成！両面を大公開 ✨ ／
+        </h2>
+        <span class="badge-pill bg-rose-100 text-rose-800 font-bold text-[9px] sm:text-[10px]">Official Flyer</span>
+      </div>
+
+      <p class="text-[12px] sm:text-xs text-slate-700 leading-relaxed mb-3">
+        生徒会チラシチームのアイデアをもとに想いを込めて作り上げた、創立80周年記念文化祭「東風祭」の公式チラシです！🎉 タブを切り替えて両面をご覧いただけます。
+      </p>
+
+      <!-- 省スペース タブ切り替えプレビュー -->
+      <div class="bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-200">
+        <!-- 切替タブスイッチ -->
+        <div class="flex items-center bg-slate-200/80 p-1 rounded-lg gap-1 mb-2.5 max-w-xs mx-auto">
+          <button id="flyer-tab-front-btn" type="button" onclick="switchFlyerTab('front')" class="flex-1 py-1.5 px-3 rounded-md text-xs font-black transition-all bg-sky-600 text-white shadow-xs">
+            📄 表面（ポスター）
+          </button>
+          <button id="flyer-tab-back-btn" type="button" onclick="switchFlyerTab('back')" class="flex-1 py-1.5 px-3 rounded-md text-xs font-bold transition-all bg-transparent text-slate-600 hover:text-slate-900">
+            🗺️ 裏面（タイムテーブル）
+          </button>
+        </div>
+
+        <!-- プレビュー表示エリア（高さ固定でコンパクト） -->
+        <div class="relative flex justify-center items-center py-1">
+          <!-- 表面表示 -->
+          <div id="flyer-view-front" class="flex flex-col items-center transition-opacity duration-300">
+            <a href="./flyer_official.pdf" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg shadow border border-slate-200">
+              <img src="./images/flyer_front.jpg" alt="東風祭 公式チラシ表面（ポスター絵柄）" class="max-h-64 sm:max-h-72 w-auto object-contain transition-transform duration-200 group-hover:scale-102">
+              <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded-full opacity-90 group-hover:opacity-100 flex items-center gap-1 shadow">
+                🔍 タップで拡大（PDF）
+              </span>
+            </a>
+            <p class="text-[11px] text-slate-500 mt-1.5 font-medium text-center">
+              青空と校舎のメインビジュアル ＆「東風薫る」開催テーマ
+            </p>
+          </div>
+
+          <!-- 裏面表示（初期は非表示） -->
+          <div id="flyer-view-back" class="hidden flex flex-col items-center transition-opacity duration-300">
+            <a href="./flyer_official.pdf" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg shadow border border-slate-200">
+              <img src="./images/flyer_back.png" alt="東風祭 公式チラシ裏面（タイムテーブル＆見どころ）" class="max-h-64 sm:max-h-72 w-auto object-contain transition-transform duration-200 group-hover:scale-102">
+              <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded-full opacity-90 group-hover:opacity-100 flex items-center gap-1 shadow">
+                🔍 タップで拡大（PDF）
+              </span>
+            </a>
+            <p class="text-[11px] text-slate-500 mt-1.5 font-medium text-center">
+              体育館ステージ、キッチンカー、書楽コラボ、安心・安全ルール等
+            </p>
+          </div>
+        </div>
+
+        <!-- PDF保存・閲覧ボタン -->
+        <div class="mt-2.5 pt-2 border-t border-slate-200/80">
+          <a href="./flyer_official.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white font-black py-2.5 px-3 rounded-xl text-xs sm:text-[13px] transition-all shadow-sm active:scale-98">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            📥 公式チラシ（両面・高画質PDF）を見る・保存する
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- 4. 【カウントダウンタイマー】（クリーンで明るい4分割デザイン） -->
@@ -703,17 +778,35 @@
         <span class="badge-pill bg-teal-100 text-teal-800 font-bold text-[10px]">Overview</span>
       </div>
 
-      <!-- ① 日程 -->
-      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[13px] sm:text-sm">
-        <div class="flex items-center gap-2 mb-1.5">
+      <!-- ① 日程・時間詳細 -->
+      <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[13px] sm:text-sm space-y-2">
+        <div class="flex items-center gap-2 mb-1">
           <span class="badge-pill bg-teal-600 text-white text-[10px]">日程</span>
           <strong class="text-slate-900 text-sm font-bold">2026年11月7日(土) 開催</strong>
         </div>
-        <p class="text-slate-700 leading-relaxed pl-1">
-          <strong>【第1部】10:00 〜 15:00</strong>（一般公開・どなたでも来場可）<br>
-          <strong>【第2部】15:30 〜 17:15</strong>（全校生徒記念イベント／在校生限定・非公開）<br>
-          <strong>【フィナーレ】17:30頃 〜</strong>（創立80周年記念花火／在校生限定・任意参加）
-        </p>
+        <div class="space-y-1.5 pl-1">
+          <div class="flex items-start gap-1.5">
+            <span class="badge-pill bg-sky-600 text-white text-[9px] shrink-0 mt-0.5">第1部 一般公開</span>
+            <div class="text-slate-800 leading-relaxed">
+              <strong>10:00 〜 15:00</strong>（受付開始 <strong>9:45</strong>／<strong>正門最終受付 14:30</strong>）<br>
+              <span class="text-xs text-slate-600">※入場無料・事前申込不要／どなたでも自由にご来場いただけます。</span><br>
+              <span class="text-xs text-rose-700 font-bold">※キッチンカー販売は14:30終了／飲食スペースのご利用は14:45終了となります。</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-1.5 pt-1 border-t border-slate-200">
+            <span class="badge-pill bg-amber-600 text-white text-[9px] shrink-0 mt-0.5">第2部 全校式典</span>
+            <div class="text-slate-800 leading-relaxed">
+              <strong>15:30 〜 17:15</strong>（在校生限定・完全非公開）<br>
+              <span class="text-xs text-slate-500">※第2部式典準備のため、一般来場者の方は14:30以降は【南門】からご退場をお願いいたします（15:00完全退出）。</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-1.5 pt-1 border-t border-slate-200">
+            <span class="badge-pill bg-purple-600 text-white text-[9px] shrink-0 mt-0.5">フィナーレ 花火</span>
+            <div class="text-slate-800 leading-relaxed">
+              <strong>17:30 〜 17:45</strong>（創立80周年記念花火・約15分間／在校生限定・任意参加）
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- ② 会場・アクセス -->
@@ -723,7 +816,7 @@
           <strong class="text-slate-900 text-sm font-bold no-underline" style="text-decoration: none; border-bottom: none;">さいたま市立与野東中学校</strong>
         </div>
         <p class="text-slate-700 leading-relaxed pl-1 no-underline" style="text-decoration: none; border-bottom: none;">
-          校庭・体育館・校舎内・視聴覚室 等
+          体育館・校舎内・視聴覚室 等
         </p>
       </div>
 
@@ -763,6 +856,83 @@
         <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
           ※ご送信いただいた内容は実行委員会にて確認のうえ、ご入力いただいたメールアドレス宛に折り返しご返信いたします。
         </p>
+      </div>
+      <!-- ④ 【重要】ご来場のみなさまへ（超軽量・タップで開く安心ルール） -->
+      <div class="bg-amber-50/90 p-3.5 sm:p-4 rounded-xl border-2 border-amber-300 text-[13px] sm:text-sm space-y-2.5">
+        <div class="flex items-center justify-between border-b border-amber-200 pb-2">
+          <div class="flex items-center gap-1.5 text-amber-950 font-bold">
+            <svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <span class="text-xs sm:text-sm font-black">【重要】ご来場のみなさまへ（ルールとマナーのお願い）</span>
+          </div>
+          <span class="text-[10px] text-amber-800 font-bold bg-amber-200/70 px-2 py-0.5 rounded-full">タップで詳細</span>
+        </div>
+        
+        <div class="space-y-1.5">
+          <!-- 1. 撮影・SNS禁止 -->
+          <details class="group bg-white rounded-lg border border-amber-200 overflow-hidden transition-all">
+            <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none font-bold text-rose-800 text-xs sm:text-[13px] hover:bg-rose-50/40">
+              <span class="flex items-center gap-1.5">
+                <span>🚫</span> 校内での写真・動画撮影・SNS投稿は全面禁止
+              </span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-[10px] ml-2 shrink-0">▼</span>
+            </summary>
+            <div class="px-3 pb-2.5 pt-1 text-xs text-slate-600 border-t border-amber-100 bg-amber-50/20 leading-relaxed">
+              生徒のプライバシー保護および安全管理のため、敷地内での無断撮影・録音・SNS等への投稿は固くお断りいたします。
+            </div>
+          </details>
+
+          <!-- 2. 交通手段（徒歩推奨） -->
+          <details class="group bg-white rounded-lg border border-amber-200 overflow-hidden transition-all">
+            <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none font-bold text-slate-900 text-xs sm:text-[13px] hover:bg-slate-50">
+              <span class="flex items-center gap-1.5">
+                <span>🚲</span> なるべく【徒歩】でご来校ください（車・バイク不可）
+              </span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-[10px] ml-2 shrink-0">▼</span>
+            </summary>
+            <div class="px-3 pb-2.5 pt-1 text-xs text-slate-600 border-t border-amber-100 bg-amber-50/20 leading-relaxed">
+              校内駐輪場は台数に限りがあるため、近隣の方はなるべく徒歩でのご来校をお願いします。自転車の方は<strong>「下落合小学校 臨時駐輪場（利用時間：10:00〜15:00）」</strong>をご利用ください。近隣商業施設への無断駐輪は固く禁止です。※お車・バイクでの来校はできません。
+            </div>
+          </details>
+
+          <!-- 3. 上履き・靴袋 -->
+          <details class="group bg-white rounded-lg border border-amber-200 overflow-hidden transition-all">
+            <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none font-bold text-slate-900 text-xs sm:text-[13px] hover:bg-slate-50">
+              <span class="flex items-center gap-1.5">
+                <span>🎒</span> 上履き・靴袋（外靴を入れる袋）をご持参ください
+              </span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-[10px] ml-2 shrink-0">▼</span>
+            </summary>
+            <div class="px-3 pb-2.5 pt-1 text-xs text-slate-600 border-t border-amber-100 bg-amber-50/20 leading-relaxed">
+              校舎内および体育館へ入室される際は、上履きをご着用いただきます。外靴を入れる袋もあわせてご持参ください。
+            </div>
+          </details>
+
+          <!-- 4. ゴミ分別 -->
+          <details class="group bg-white rounded-lg border border-amber-200 overflow-hidden transition-all">
+            <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none font-bold text-slate-900 text-xs sm:text-[13px] hover:bg-slate-50">
+              <span class="flex items-center gap-1.5">
+                <span>🗑️</span> ゴミの分別・持ち帰りへのご協力
+              </span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-[10px] ml-2 shrink-0">▼</span>
+            </summary>
+            <div class="px-3 pb-2.5 pt-1 text-xs text-slate-600 border-t border-amber-100 bg-amber-50/20 leading-relaxed">
+              キッチンカー等の飲食ゴミは、指定の分別ステーションへ捨てるか、お持ち帰りにご協力をお願いいたします。
+            </div>
+          </details>
+
+          <!-- 5. 退出ルート -->
+          <details class="group bg-white rounded-lg border border-amber-200 overflow-hidden transition-all">
+            <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none font-bold text-slate-900 text-xs sm:text-[13px] hover:bg-slate-50">
+              <span class="flex items-center gap-1.5">
+                <span>🚶</span> 14:30以降の退出は【南門】をご利用ください
+              </span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-[10px] ml-2 shrink-0">▼</span>
+            </summary>
+            <div class="px-3 pb-2.5 pt-1 text-xs text-slate-600 border-t border-amber-100 bg-amber-50/20 leading-relaxed">
+              <strong>14:30以降、正門は「入場専用」</strong>となり退出できません。第2部式典準備のため、一般来場者の方は<strong>14:30以降は【南門】からご退場</strong>をお願いいたします（15:00完全退出）。
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -828,61 +998,164 @@
         </div>
       </div>
 
-      <!-- 生徒有志ハイライトバナー（東風パパがひょっこり！） -->
-      <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 relative mt-7 sm:mt-8">
-        
-        <!-- ☁️ ひょっこり雲乗り東風パパ（タップで楽しいメッセージ！） -->
-        <div id="mascot-fujin-btn" onclick="talkFujin()" class="absolute -top-11 -right-1 sm:right-2 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風パパをタップしてね！">
+      <!-- 生徒有志ハイライトバナー（東風パパは白背景エリアにしっかり配置） -->
+      <div class="relative mt-8 sm:mt-10 mb-3">
+        <!-- ☁️ ひょっこり雲乗り東風パパ（白背景エリアにしっかり載せてスマホでも超くっきり！） -->
+        <div id="mascot-fujin-btn" onclick="talkFujin()" class="absolute -top-11 sm:-top-12 right-2 sm:right-4 flex flex-col sm:flex-row items-end sm:items-center cursor-pointer z-20 select-none group transition-transform active:scale-90 hover:scale-105" title="東風パパをタップしてね！">
           <div id="mascot-fujin-bubble" class="bg-white text-sky-950 text-[11px] sm:text-xs font-black px-3 py-1 rounded-full border-2 border-sky-400 shadow-md mb-1 sm:mb-0 sm:-mr-2 z-10 animate-bounce transition-all whitespace-nowrap text-center max-w-[200px] sm:max-w-none">
             好きを咲かせよう！
           </div>
-          <img id="mascot-fujin-img" src="./images/mascot_fujin.png" alt="雲乗り東風パパ マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain mascot-bounce group-hover:rotate-6 transition-transform">
+          <img id="mascot-fujin-img" src="./images/mascot_fujin.png" alt="雲乗り東風パパ マスコットキャラクター" class="w-16 h-16 sm:w-20 sm:h-20 object-contain mascot-bounce group-hover:rotate-6 transition-transform filter drop-shadow-md">
         </div>
 
-        <div>
-          <span class="bg-white/20 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Student Project</span>
-          <h3 class="text-sm font-black mt-0.5">たくさんの生徒有志がエントリー！熱気あふれる発表＆展示</h3>
+        <div class="bg-gradient-to-r from-sky-500 via-indigo-500 to-teal-500 text-white rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div>
+            <span class="bg-white/20 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Student Project</span>
+            <h3 class="text-sm font-black mt-0.5">たくさんの生徒有志がエントリー！熱気あふれる発表＆展示</h3>
+          </div>
+          <span class="bg-white text-slate-900 text-xs font-black px-3 py-1.5 rounded-lg shrink-0 shadow-sm">
+            詳細 順次公開
+          </span>
         </div>
-        <span class="bg-white text-slate-900 text-xs font-black px-3 py-1.5 rounded-lg shrink-0 shadow-sm">
-          詳細 順次公開
-        </span>
       </div>
 
-      <!-- プログラム一覧（見やすく明るいカードグリッド） -->
+      <!-- プログラム一覧（タイムテーブル順：東風バンド ➔ 吹奏楽 ➔ 生徒有志） -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <!-- 吹奏楽部 -->
+        <!-- ① 先生バンド（10:00〜 オープニング） -->
         <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
-            <span class="badge-pill bg-sky-100 text-sky-800">生演奏</span>
-          </div>
-          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🎺 吹奏楽部 記念コンサート</h3>
-          <p class="text-[11px] text-slate-500 mt-0.5">（タイムテーブルは後日発表）</p>
-        </div>
-
-        <!-- 先生バンド -->
-        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-[10px] font-bold text-sky-600">体育館ステージ</span>
-            <span class="badge-pill bg-slate-200 text-slate-600">Coming Soon</span>
+            <span class="text-[10px] font-bold text-rose-600">体育館ステージ 10:00 〜</span>
+            <span class="badge-pill bg-rose-100 text-rose-800 font-bold">オープニング生演奏！</span>
           </div>
           <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🎸 東風スペシャルバンド</h3>
-          <p class="text-[11px] text-slate-500 mt-0.5">続報乞うご期待！</p>
+          <p class="text-[11px] text-slate-600 mt-0.5"><strong>10:00 〜</strong> 先生たちによる熱いオープニング生ライブ！</p>
         </div>
 
-        <!-- 地域・外部団体体験コンテンツ -->
-        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
+        <!-- ② 吹奏楽部（10:20〜 第1公演 ＆ 14:30〜 第2公演大トリ） -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-[10px] font-bold text-indigo-600">校舎内（予定）</span>
-            <span class="badge-pill bg-indigo-100 text-indigo-800">地域・外部連携</span>
+            <span class="text-[10px] font-bold text-sky-600">体育館ステージ 10:20 〜 / 14:30 〜</span>
+            <span class="badge-pill bg-sky-100 text-sky-800 font-bold">迫力の生演奏（2公演）</span>
           </div>
-          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🤝 地域・外部団体 特別体験コンテンツ</h3>
-          <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
-            地域連携コーディネーター連携による特別体験ブース！詳細コンテンツは10月中旬に公開予定です。
-          </p>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🎺 吹奏楽部 記念コンサート</h3>
+          <div class="text-[11px] text-slate-600 mt-1 space-y-0.5">
+            <div>🎵 <strong>第1公演：10:20 〜</strong></div>
+            <div>🌟 <strong>第2公演：14:30 〜</strong> <span class="text-rose-700 font-bold">（第1部大トリ！）</span></div>
+          </div>
         </div>
 
-        <!-- 部活動・学年体験 -->
+        <!-- ③ 生徒有志ステージ発表（11:00〜 全8組／先行5組大公開＆モーダル詳細） -->
+        <div class="bg-gradient-to-br from-indigo-50/90 via-white to-purple-50/90 rounded-2xl p-4 sm:p-5 border-2 border-indigo-200 sm:col-span-2 shadow-xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-indigo-100 pb-2 mb-3 gap-1">
+            <div class="flex items-center gap-2">
+              <span class="badge-pill bg-indigo-600 text-white font-black text-[10px]">体育館ステージ 11:00 〜</span>
+              <span class="badge-pill bg-amber-100 text-amber-800 border border-amber-300 font-bold text-[10px]">全8組熱演！</span>
+            </div>
+            <span class="text-[11px] text-indigo-700 font-bold flex items-center gap-1">
+              <span>👉</span> カードをタップして意気込みをチェック！
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 font-rounded">
+              🏟️ 生徒有志ステージ エントリーチーム（先行5組大公開！）
+            </h3>
+            <p class="text-[12px] text-slate-600 mt-0.5 leading-relaxed">
+              オーディションを勝ち抜いた生徒たちが本気のパフォーマンスを披露！届いたチームロゴと熱いメッセージをご紹介します✨
+            </p>
+          </div>
+
+          <!-- コンパクトカードグリッド（スマホ2列 / PC4列） -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <!-- ① Electric Monster（歌：ローズピンク統一） -->
+            <div onclick="openYushiModal(1)" class="cursor-pointer group bg-white rounded-xl p-2.5 border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col items-center text-center active:scale-95">
+              <span class="badge-pill bg-rose-500 text-white text-[9px] font-bold mb-1.5 self-start">① 歌</span>
+              <div class="w-full h-24 sm:h-28 rounded-lg overflow-hidden bg-slate-50 flex items-center justify-center p-1 border border-slate-100">
+                <img src="./images/yushi_01_electric_monster.jpg" alt="Electric Monster" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+              </div>
+              <strong class="text-xs sm:text-[13px] font-black text-slate-900 mt-2 line-clamp-1">Electric Monster</strong>
+              <span class="text-[10px] text-indigo-600 font-bold mt-1 group-hover:underline flex items-center gap-0.5">
+                詳細を見る <span>💬</span>
+              </span>
+            </div>
+
+            <!-- ⑤ ＝Rikujo♡（歌：ローズピンク統一） -->
+            <div onclick="openYushiModal(5)" class="cursor-pointer group bg-white rounded-xl p-2.5 border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col items-center text-center active:scale-95">
+              <span class="badge-pill bg-rose-500 text-white text-[9px] font-bold mb-1.5 self-start">⑤ 歌</span>
+              <div class="w-full h-24 sm:h-28 rounded-lg overflow-hidden bg-slate-50 flex items-center justify-center p-1 border border-slate-100">
+                <img src="./images/yushi_05_rikujo.jpg" alt="＝Rikujo♡" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+              </div>
+              <strong class="text-xs sm:text-[13px] font-black text-slate-900 mt-2 line-clamp-1">＝Rikujo♡</strong>
+              <span class="text-[10px] text-indigo-600 font-bold mt-1 group-hover:underline flex items-center gap-0.5">
+                詳細を見る <span>💬</span>
+              </span>
+            </div>
+
+            <!-- ⑥ 三年でございます（コント：パープル統一） -->
+            <div onclick="openYushiModal(6)" class="cursor-pointer group bg-white rounded-xl p-2.5 border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col items-center text-center active:scale-95">
+              <span class="badge-pill bg-purple-600 text-white text-[9px] font-bold mb-1.5 self-start">⑥ コント</span>
+              <div class="w-full h-24 sm:h-28 rounded-lg overflow-hidden bg-slate-50 flex items-center justify-center p-1 border border-slate-100">
+                <img src="./images/yushi_06_sannen.jpg" alt="三年でございます" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+              </div>
+              <strong class="text-xs sm:text-[13px] font-black text-slate-900 mt-2 line-clamp-1">三年でございます</strong>
+              <span class="text-[10px] text-indigo-600 font-bold mt-1 group-hover:underline flex items-center gap-0.5">
+                詳細を見る <span>💬</span>
+              </span>
+            </div>
+
+            <!-- ⑦ バレー部（ダンス：アンバーゴールド統一） -->
+            <div onclick="openYushiModal(7)" class="cursor-pointer group bg-white rounded-xl p-2.5 border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col items-center text-center active:scale-95">
+              <span class="badge-pill bg-amber-500 text-slate-950 font-black text-[9px] mb-1.5 self-start">⑦ ダンス</span>
+              <div class="w-full h-24 sm:h-28 rounded-lg overflow-hidden bg-slate-50 flex items-center justify-center p-1 border border-slate-100">
+                <img src="./images/yushi_07_volley.jpg" alt="バレー部" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+              </div>
+              <strong class="text-xs sm:text-[13px] font-black text-slate-900 mt-2 line-clamp-1">バレー部</strong>
+              <span class="text-[10px] text-indigo-600 font-bold mt-1 group-hover:underline flex items-center gap-0.5">
+                詳細を見る <span>💬</span>
+              </span>
+            </div>
+
+            <!-- ⑧ ＩＶ（ダンス：アンバーゴールド統一） -->
+            <div onclick="openYushiModal(8)" class="cursor-pointer group bg-white rounded-xl p-2.5 border border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col items-center text-center active:scale-95">
+              <span class="badge-pill bg-amber-500 text-slate-950 font-black text-[9px] mb-1.5 self-start">⑧ ダンス</span>
+              <div class="w-full h-24 sm:h-28 rounded-lg overflow-hidden bg-slate-900 flex items-center justify-center p-1 border border-slate-800">
+                <img src="./images/yushi_08_iv.jpg" alt="ＩＶ" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+              </div>
+              <strong class="text-xs sm:text-[13px] font-black text-slate-900 mt-2 line-clamp-1">ＩＶ</strong>
+              <span class="text-[10px] text-indigo-600 font-bold mt-1 group-hover:underline flex items-center gap-0.5">
+                詳細を見る <span>💬</span>
+              </span>
+            </div>
+
+            <!-- 他3組 Coming Soon -->
+            <div class="bg-slate-100/80 rounded-xl p-2.5 border border-dashed border-slate-300 flex flex-col items-center justify-center text-center col-span-1 sm:col-span-3">
+              <span class="text-lg">⏳</span>
+              <span class="text-xs font-bold text-slate-600 mt-1">② Orange Rangeでチン♩ / ③ R & T / ④ SPARK</span>
+              <span class="text-[10px] text-slate-500 mt-0.5">残りの3チームも続報をお楽しみに！</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④ 地域共創 特別企画：ブックデポ書楽様 -->
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2 space-y-2">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-bold text-emerald-700">校舎内・地域連携ブース</span>
+            <span class="badge-pill bg-emerald-100 text-emerald-800 font-bold">地域共創🤝特別企画</span>
+          </div>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🤝 北与野駅前「ブックデポ書楽」特設コラボコーナー</h3>
+          
+          <div class="bg-white p-3 rounded-lg border border-emerald-200 space-y-1 text-xs">
+            <div class="flex items-center gap-1.5 font-bold text-emerald-900 text-[13px]">
+              <span>📚</span> 地元大型書店「ブックデポ書楽」× 与野東中 生徒会＆図書委員会
+            </div>
+            <p class="text-slate-600 text-[12px] leading-relaxed">
+              地元・北与野駅前の大型書店「ブックデポ書楽」様との特別タイアップが決定！<br>
+              詳細は後日公開！お楽しみに！
+            </p>
+          </div>
+        </div>
+
+        <!-- ⑤ 部活動・学年体験 -->
         <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
           <div class="flex items-center justify-between mb-1.5">
             <span class="text-[10px] font-bold text-emerald-600">校舎内・体育館</span>
@@ -897,19 +1170,20 @@
           </div>
         </div>
 
-        <!-- キッチンカー -->
+        <!-- ⑥ キッチンカー -->
         <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 sm:col-span-2">
           <div class="flex items-center justify-between mb-1">
             <span class="text-[10px] font-bold text-orange-600">昇降口前ロータリー</span>
             <span class="badge-pill bg-orange-100 text-orange-800">テイクアウト軽食</span>
           </div>
-          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🚚 絶品キッチンカー＆飲食エリア</h3>
+          <h3 class="text-[13.5px] sm:text-sm font-black text-slate-900">🚚 絶品キッチンカー（全5台出店！）＆飲食エリア</h3>
           <p class="text-xs sm:text-[12.5px] text-slate-600 mt-0.5 leading-relaxed">
-            人気のキッチンカーがやってくる！手軽でおいしい軽食をお楽しみいただけます。指定の「飲食スペース」をご利用ください。（※出店メニュー・詳細は後日公開予定！）
+            人気のキッチンカーが勢揃い！（全5台出店予定）手軽でおいしい軽食をお楽しみいただけます。指定の「飲食スペース（中庭等）」をご利用ください。<br>
+            <span class="text-slate-500 text-[11px]">※詳しい出店メニュー等の情報は、詳細が届き次第順次お知らせいたします！</span><br>
+            <strong class="text-rose-700">※販売時間：10:00〜14:30（完売次第終了）／飲食スペース利用は14:45まで</strong>
           </p>
         </div>
-      </div>
-    </section>
+      </div>    </section>
 
     <!-- 8. 【第2部（夕暮れ）：校内記念イベント】（在校生限定・明るいサンセットカード） -->
     <section class="card-sunset-clean rounded-2xl p-5 shadow-sm flex flex-col gap-3.5 relative overflow-hidden">
@@ -938,11 +1212,12 @@
       </p>
     </section>
 
-    <!-- 9. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生任意参加） -->
+    <!-- 9. 【フィナーレ：創立80周年記念 花火】（第2部フィナーレ・在校生限定・任意参加） -->
     <section class="card-night-clean rounded-2xl p-5 shadow-xl relative overflow-hidden border border-purple-500/30">
       
-      <!-- 🎆 カード内蔵型：スマホでも確実に咲き誇るキラキラ大輪花火アニメーション（右肩＆左下） -->
-      <div class="absolute -top-3 -right-3 w-24 h-24 card-firework-pulse pointer-events-none opacity-85 z-0">
+      <!-- 🎆 カード内蔵型：文字にかからないよう外側へ逃がした大輪花火アニメーション（右肩＆左下） -->
+      <!-- 右上花火：中心◎を外側に逃がし、「※雨天中止」の文字にかからない位置に配置 -->
+      <div class="absolute -top-9 -right-9 w-24 h-24 card-firework-pulse pointer-events-none opacity-70 z-0">
         <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
           <g stroke="url(#card-fw-grad)" stroke-width="2.5" stroke-linecap="round">
             <line x1="50" y1="10" x2="50" y2="30"/>
@@ -954,11 +1229,11 @@
             <line x1="22" y1="78" x2="36" y2="64"/>
             <line x1="78" y1="22" x2="64" y2="36"/>
           </g>
-          <circle cx="50" cy="50" r="7" fill="#ffffff" opacity="0.95"/>
-          <circle cx="50" cy="6" r="3.5" fill="#fde047"/>
-          <circle cx="50" cy="94" r="3.5" fill="#fde047"/>
-          <circle cx="6" cy="50" r="3.5" fill="#fde047"/>
-          <circle cx="94" cy="50" r="3.5" fill="#fde047"/>
+          <circle cx="50" cy="50" r="3.5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="50" cy="6" r="3" fill="#fde047"/>
+          <circle cx="50" cy="94" r="3" fill="#fde047"/>
+          <circle cx="6" cy="50" r="3" fill="#fde047"/>
+          <circle cx="94" cy="50" r="3" fill="#fde047"/>
           <defs>
             <linearGradient id="card-fw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#fde047"/>
@@ -967,7 +1242,8 @@
           </defs>
         </svg>
       </div>
-      <div class="absolute -bottom-4 -left-3 w-20 h-20 card-firework-pulse pointer-events-none opacity-70 z-0" style="animation-delay: 1.5s;">
+      <!-- 左下花火：中心◎を外側に逃がし、「間はございません）」の文字にかからない位置に配置 -->
+      <div class="absolute -bottom-8 -left-8 w-20 h-20 card-firework-pulse pointer-events-none opacity-60 z-0" style="animation-delay: 1.5s;">
         <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
           <g stroke="#38bdf8" stroke-width="2" stroke-linecap="round">
             <line x1="50" y1="15" x2="50" y2="32"/>
@@ -979,7 +1255,7 @@
             <line x1="25" y1="75" x2="37" y2="63"/>
             <line x1="75" y1="25" x2="63" y2="37"/>
           </g>
-          <circle cx="50" cy="50" r="5" fill="#ffffff"/>
+          <circle cx="50" cy="50" r="3" fill="#ffffff" opacity="0.85"/>
         </svg>
       </div>
 
@@ -1020,7 +1296,7 @@
           本文化祭は、そんな記念の1ページを皆さまと共にお祝いしたいという思いで企画されました。在校生だけでなく、小学生や卒業生、地域の皆様のご来校を心よりお待ちしております。
         </p>
         <p class="text-xs sm:text-[12.5px] text-slate-400 pt-1.5 border-t border-slate-700/60">
-          タイムテーブル、キッチンカー、体験ブースなど詳細は<strong>【10月中旬頃】</strong>に順次公開・アップデート予定です！
+          タイムテーブルや見どころなど詳細は公式チラシに掲載中！最新情報は本サイトおよび公式Instagramにて随時発信中です！
         </p>
       </div>
 
@@ -1030,7 +1306,7 @@
           <span>✨</span> このページをブックマークする <span>⭐</span>
         </button>
         <span class="text-[11px] text-sky-200 font-medium">
-          📱 10月中旬の詳細公開をお楽しみに！
+          📱 最新情報は公式Instagramでも順次発信中！
         </span>
       </div>
     </section>
@@ -1231,6 +1507,133 @@
         }, 750);
       }
     })();
-  </script>
+  
+    // チラシ表面・裏面タブ切り替え
+    function switchFlyerTab(tab) {
+      const frontBtn = document.getElementById('flyer-tab-front-btn');
+      const backBtn = document.getElementById('flyer-tab-back-btn');
+      const frontView = document.getElementById('flyer-view-front');
+      const backView = document.getElementById('flyer-view-back');
+      
+      if (!frontBtn || !backBtn || !frontView || !backView) return;
+
+      if (tab === 'front') {
+        frontBtn.className = "flex-1 py-1.5 px-3 rounded-md text-xs font-black transition-all bg-sky-600 text-white shadow-xs";
+        backBtn.className = "flex-1 py-1.5 px-3 rounded-md text-xs font-bold transition-all bg-transparent text-slate-600 hover:text-slate-900";
+        frontView.classList.remove('hidden');
+        backView.classList.add('hidden');
+      } else {
+        backBtn.className = "flex-1 py-1.5 px-3 rounded-md text-xs font-black transition-all bg-rose-600 text-white shadow-xs";
+        frontBtn.className = "flex-1 py-1.5 px-3 rounded-md text-xs font-bold transition-all bg-transparent text-slate-600 hover:text-slate-900";
+        backView.classList.remove('hidden');
+        frontView.classList.add('hidden');
+      }
+    }
+
+    // 生徒有志モーダルデータ＆制御
+    const YUSHI_DATA = {
+      1: {
+        num: "①",
+        name: "Electric Monster",
+        badge: "① 歌",
+        badgeClass: "badge-pill bg-rose-500 text-white font-bold",
+        img: "./images/yushi_01_electric_monster.jpg",
+        msg: "スーパーマリオオデッセイの「Jump Up Super Star!」とONE PIECE FILM REDの「私は最強」を歌います。\n二人のハモリでげきあちにします🔥\n予定開けといてください💛"
+      },
+      5: {
+        num: "⑤",
+        name: "＝Rikujo♡",
+        badge: "⑤ 歌",
+        badgeClass: "badge-pill bg-rose-500 text-white font-bold",
+        img: "./images/yushi_05_rikujo.jpg",
+        msg: "ディズニー曲メドレーを歌います。\nよろしくお願いします。"
+      },
+      6: {
+        num: "⑥",
+        name: "三年でございます",
+        badge: "⑥ コント",
+        badgeClass: "badge-pill bg-purple-600 text-white font-bold",
+        img: "./images/yushi_06_sannen.jpg",
+        msg: "あの映画泥棒の裏で語られる「あったはずの物語」映画泥棒の全てを見届けよ！"
+      },
+      7: {
+        num: "⑦",
+        name: "バレー部",
+        badge: "⑦ ダンス",
+        badgeClass: "badge-pill bg-amber-500 text-slate-950 font-black",
+        img: "./images/yushi_07_volley.jpg",
+        msg: "男子バレー部が本気ダンス！\n見にきてね❤️"
+      },
+      8: {
+        num: "⑧",
+        name: "ＩＶ",
+        badge: "⑧ ダンス",
+        badgeClass: "badge-pill bg-amber-500 text-slate-950 font-black",
+        img: "./images/yushi_08_iv.jpg",
+        msg: "4人の最高のパフォーマンスをぜひ最後までお楽しみください‼︎"
+      }
+    };
+
+    function openYushiModal(id) {
+      const data = YUSHI_DATA[id];
+      if (!data) return;
+      document.getElementById('yushi-modal-badge').textContent = data.badge;
+      document.getElementById('yushi-modal-badge').className = data.badgeClass + ' text-[10px]';
+      document.getElementById('yushi-modal-name').textContent = data.name;
+      document.getElementById('yushi-modal-img').src = data.img;
+      document.getElementById('yushi-modal-img').alt = data.name;
+      document.getElementById('yushi-modal-msg').textContent = data.msg;
+      
+      const modal = document.getElementById('yushi-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeYushiModal() {
+      const modal = document.getElementById('yushi-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function closeYushiModalOnBackdrop(event) {
+      if (event.target.id === 'yushi-modal') {
+        closeYushiModal();
+      }
+    }
+
+</script>
+  <!-- 🎭 有志ステージ詳細ポップアップモーダル -->
+  <div id="yushi-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs hidden transition-opacity duration-200" onclick="closeYushiModalOnBackdrop(event)">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-5 shadow-2xl border border-slate-100 relative transform transition-transform animate-scaleIn" onclick="event.stopPropagation()">
+      <!-- 閉じるボタン -->
+      <button type="button" onclick="closeYushiModal()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- モーダルヘッダー -->
+      <div class="flex items-center gap-2 mb-3">
+        <span id="yushi-modal-badge" class="badge-pill bg-indigo-600 text-white text-[10px] font-black">① 歌・ハモリ</span>
+        <h3 id="yushi-modal-name" class="text-base font-black text-slate-900 font-rounded">Electric Monster</h3>
+      </div>
+
+      <!-- ロゴ画像拡大 -->
+      <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 flex items-center justify-center p-2 mb-3.5 max-h-56">
+        <img id="yushi-modal-img" src="" alt="" class="max-h-52 w-auto object-contain rounded-lg">
+      </div>
+
+      <!-- 生徒からの一言メッセージ -->
+      <div class="bg-indigo-50/70 p-3.5 rounded-xl border border-indigo-100 space-y-1">
+        <span class="text-[10px] font-black text-indigo-800 tracking-wider uppercase block">💬 生徒からのメッセージ</span>
+        <p id="yushi-modal-msg" class="text-xs sm:text-[13px] text-slate-800 leading-relaxed font-medium whitespace-pre-line"></p>
+      </div>
+
+      <!-- 下部ボタン -->
+      <div class="mt-4">
+        <button type="button" onclick="closeYushiModal()" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
