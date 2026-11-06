@@ -605,9 +605,9 @@
 
 
   <!-- 1. 【最上部アナウンスバー】 -->
-  <div class="bg-sky-600 text-white text-xs font-bold py-2 px-4 text-center tracking-wide shadow-sm flex items-center justify-center gap-1.5">
-    <span class="inline-block w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
-    <span>2026年11月7日(土) 開催！創立80周年記念文化祭 特設サイト</span>
+  <div class="bg-rose-600 text-white text-xs font-black py-2 px-4 text-center tracking-wide shadow-md flex items-center justify-center gap-1.5">
+    <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-300 animate-ping"></span>
+    <span>🎊 本日11月7日(土) 開催！創立80周年記念文化祭「東風祭」開幕！</span>
   </div>
 
   <div class="max-w-xl mx-auto px-4 pt-4 flex flex-col gap-6 relative z-10">
@@ -633,6 +633,69 @@
         </p>
       </div>
     </header>
+
+    <!-- 2.5 【当日朝限定！本日開催＆ご来場案内バナー】 -->
+    <section class="bg-gradient-to-br from-rose-500 via-amber-500 to-orange-500 p-0.5 rounded-2xl shadow-md">
+      <div class="bg-white rounded-[14px] p-4 sm:p-5 space-y-3">
+        <!-- バナー見出し -->
+        <div class="flex items-center justify-between border-b border-orange-100 pb-2.5 gap-2">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl animate-bounce">🎊</span>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="badge-pill bg-rose-600 text-white text-[10px] font-black px-2 py-0.5 animate-pulse">本日開催</span>
+                <span class="text-[10px] font-bold text-slate-500">2026.11.7(土)</span>
+              </div>
+              <h2 class="text-base sm:text-lg font-black text-slate-900 font-rounded mt-0.5">
+                創立80周年記念文化祭「東風祭」予定通り開催！
+              </h2>
+            </div>
+          </div>
+          <span class="text-[11px] font-black text-amber-800 bg-amber-100 border border-amber-300 px-2 py-1 rounded-lg shrink-0 text-center">
+            一般公開<br class="sm:hidden">10:00〜15:00
+          </span>
+        </div>
+
+        <p class="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-medium">
+          秋晴れのもと、創立80周年記念文化祭「東風祭」を本日予定通り開催いたします！生徒たちの熱気あふれるステージ・展示、絶品キッチンカーなど、ぜひ会場でお楽しみください✨
+        </p>
+
+        <!-- 家を出る前のご確認（3大リマインド） -->
+        <div class="bg-amber-50/90 rounded-xl p-3 border border-amber-200/80 space-y-1.5 text-xs text-slate-800">
+          <div class="font-bold text-amber-950 flex items-center gap-1.5 text-[12px]">
+            <span>👟</span> ご来場の皆さまへ（家を出る前のご確認）：
+          </div>
+          <ul class="text-[11.5px] text-slate-700 space-y-1 pl-1">
+            <li class="flex items-start gap-1.5">
+              <span class="text-rose-600 font-bold shrink-0">●</span>
+              <span><b>上履き・下足袋（靴入れ用袋）をご持参ください：</b> 校内・体育館への入場に必要となります。</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-rose-600 font-bold shrink-0">●</span>
+              <span><b>車・バイクでのご来校はできません：</b> なるべく徒歩・または公共交通機関でお越しください（自転車はおとなりの下落合小学校校庭臨時駐輪場10:00-15:00へ）。</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-rose-600 font-bold shrink-0">●</span>
+              <span><b>受付は【正門】です：</b> 受付開始は <b>9:45〜</b>（正門最終受付 14:30／一般退出 15:00）です。</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- インスタ速報ボタン -->
+        <a href="https://www.instagram.com/yonoeast80th/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 hover:opacity-95 text-white p-3 rounded-xl shadow transition-all group active:scale-98">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <div class="text-left">
+              <span class="text-[10px] text-white/90 font-bold block">リアルタイムの熱気＆速報をお届け！</span>
+              <span class="text-xs sm:text-[13px] font-black tracking-wide">📸 公式Instagramストーリーズで随時配信中！</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded-lg group-hover:translate-x-0.5 transition-transform shrink-0">
+            見に行く →
+          </span>
+        </a>
+      </div>
+    </section>
 
     <!-- 3. 【新着情報】（東風くんがひょっこり！） -->
     <section class="card-clean-white rounded-2xl p-4 sm:p-5 shadow-sm border-t-4 border-amber-400 relative mt-7 sm:mt-8">
